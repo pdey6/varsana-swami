@@ -1,0 +1,22 @@
+import React from "react";
+import styled from "styled-components"
+
+const AudioFile = ({name, secure_url}) => {
+  return (
+    <Wrapper>
+      <h5>{name}</h5>
+      <audio src={`${secure_url}`} type="audio/mpeg" controls />
+    </Wrapper>
+  );
+};
+
+export default AudioFile;
+
+
+const Wrapper = styled.article`
+  margin-bottom: 1em;
+
+  audio {
+    width: 100%;
+  }
+`
