@@ -26,7 +26,6 @@ const Writing = ({ excerpt, frontmatter, fields}) => {
 };
 
 const Wrapper = styled.article`
-  margin-bottom: 2em;
   padding: 2em 0;
   border-bottom: 3px solid var(--grey);
 
@@ -87,9 +86,21 @@ const Wrapper = styled.article`
       order: 2;
     }
 
-    .img {
+  .writing-date {
+    
+  }
+
+  .writing-title {
+    
+  }
+
+  .writing-excerpt {
+    
+  }
+
+    .writing-img {
       height: 100%;
-      max-height: 20rem;
+      max-height: 25rem;
     }
   }
 `;

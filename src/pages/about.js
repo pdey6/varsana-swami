@@ -1,42 +1,40 @@
-import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import styled from 'styled-components'
-
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 
 const About = (props) => {
   return (
+    <main className="page">
+      <header className="page-header">
+        <h2 className="page-title"> Varsana Swami </h2>
+        <div className="page-hero">
+          <StaticImage
+            src="../assets/images/about-1.jpg"
+            alt="about"
+            className="page-hero-img about-img"
+          />
+          <article className="page-hero-info">
+            <p>
+              Varsana Maharaj is known for his deep understanding of the Gaudiya
+              Vaishnava teachings, and his enlivening presentations on Gaura
+              Lila, Vrindavan pastimes, and Dhama-tattva.
+            </p>
+            <p>
+              Led by the sensitivity of his heart, Maharaj has a unique lifelong
+              connection with the Earth. His reverence is palpable as he takes
+              special interest in the Dhama, sustainability and eco ethics.
+            </p>
+            <p>
+              Maharaj effortlessly connects the magic of the natural world to
+              Bhakti theology in a way that both illuminates scriptural
+              understanding and awakens intuitive knowing to the listener.
+            </p>
+          </article>
+        </div>
+      </header>
 
-      <main className='page'>
-        <header className='page-header'>
-          <h2 className="page-title"> Varsana Swami </h2>
-          <div className='page-hero'>
-            <StaticImage
-              src='../assets/images/about-1.jpg'
-              alt='about'
-              className='page-hero-img'
-            />
-            <article className='page-hero-info'>
-              <p>
-                Varsana Maharaj is known for his deep understanding of the
-                Gaudiya Vaishnava teachings, and his enlivening presentations on
-                Gaura Lila, Vrindavan pastimes, and Dhama-tattva.
-              </p>
-              <p>
-                Led by the sensitivity of his heart, Maharaj has a unique
-                lifelong connection with the Earth. His reverence is palpable as
-                he takes special interest in the Dhama, sustainability and eco
-                ethics.
-              </p>
-              <p>
-                Maharaj effortlessly connects the magic of the natural world to
-                Bhakti theology in a way that both illuminates scriptural
-                understanding and awakens intuitive knowing to the listener.
-              </p>
-            </article>
-          </div>
-        </header>
-
-        <section className='page-content'>
+      <section className="page-content">
+        <div className="page-content-center">
           <p>
             Varsana Swami was born in 1950 in Morristown, New Jersey. From
             childhood, he was deeply drawn to the workings of the natural world.
@@ -73,12 +71,12 @@ const About = (props) => {
             within ISKCON. Varsana Swami is the author of the book Sri Gaura
             Lila and Appreciating New Vrindaban Dhama.
           </p>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
+  );
+};
 
-  )
-}
+export default About;
 
-export default About
-
-const Wrapper = styled.main``
+const Wrapper = styled.main``;
