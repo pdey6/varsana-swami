@@ -76,7 +76,7 @@ const Wrapper = styled.article`
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 5rem;
 
-    padding: 4em 0;
+    padding: 3em 0;
 
     :nth-child(odd) > div:nth-child(even) {
       order: 1;
@@ -86,22 +86,11 @@ const Wrapper = styled.article`
       order: 2;
     }
 
-  .writing-date {
-    
-  }
-
-  .writing-title {
-    
-  }
-
-  .writing-excerpt {
-    
-  }
-
     .writing-img {
-      height: 100%;
-      max-height: 25rem;
+      height: 55vh;
+      align-self: center;
     }
+
   }
 `;
 

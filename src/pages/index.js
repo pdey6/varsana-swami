@@ -73,30 +73,32 @@ const HomePage = ({ data }) => {
         </section>
         <Writings writings={writings} />
         <section className="founder">
-          <StaticImage
-            src="../assets/images/founder.jpg"
-            alt="founder"
-            className="founder-img"
-          />
-          <div className="founder-info">
-            <h3 className="founder-info-title">His Divine Grace</h3>
-            <h2 className="founder-info-swami">
-              A.C. Bhaktivedanta Swami Prabhupada
-            </h2>
-            <h3 className="founder-info-iskcon">
-              Founder-Acharya of the International Society for Krishna
-              Consciousness
-            </h3>
-            <div className="founder-info-links">
-              <a href="https://prabhupada.krishna.com/">
-                https://prabhupada.krishna.com/
-              </a>
-              <a href="https://prabhupadavani.org/">
-                https://prabhupadavani.org/
-              </a>
-              <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
-                https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
-              </a>
+          <div className="founder-center">
+            <StaticImage
+              src="../assets/images/founder.jpg"
+              alt="founder"
+              className="founder-img"
+            />
+            <div className="founder-info">
+              <h3 className="founder-info-title">His Divine Grace</h3>
+              <h2 className="founder-info-swami">
+                A.C. Bhaktivedanta Swami Prabhupada
+              </h2>
+              <h3 className="founder-info-iskcon">
+                Founder-Acharya of the International Society for Krishna
+                Consciousness
+              </h3>
+              <div className="founder-info-links">
+                <a href="https://prabhupada.krishna.com/">
+                  https://prabhupada.krishna.com/
+                </a>
+                <a href="https://prabhupadavani.org/">
+                  https://prabhupadavani.org/
+                </a>
+                <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
+                  https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
+                </a>
+              </div>
             </div>
           </div>
         </section>

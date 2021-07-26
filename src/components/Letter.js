@@ -22,7 +22,7 @@ const Wrapper = styled.article`
   }
 
   h2, span {
-    font-size: 1.8rem; 
+    font-size: 1.7rem; 
     font-family: "Montserrat", sans-serif;
     font-style: italic;
     font-weight: 800;

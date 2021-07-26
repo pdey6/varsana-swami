@@ -8,6 +8,7 @@ const Dham = (props) => {
     <main className="page">
       <header className="page-header">
         <h2 className="page-title">Dham Seva Project</h2>
+        <div className="underline"></div>
         <div className="page-hero">
           <StaticImage
             src="../assets/images/dham.jpg"
@@ -33,7 +34,6 @@ const Dham = (props) => {
       <section className="page-content">
         <div className="page-content-center">
           <article>
-          
             <p>
               Following the order of Lord Caitanya, the Six Goswamis of
               Vrindavan under-went great sacrifices to establish temples and
@@ -48,23 +48,21 @@ const Dham = (props) => {
               Imbibing the instructions of Srila Prabhupada, His Holiness
               Varsana Swami has been carving out landscapes throughout New
               Vrindaban since 1972. His heart is vested in seeing and revealing
-              the glory and beauty of the Dhama thus he founded Dham Seva, a non-profit entity designed to identify, excavate,
-              glorify and protect the various holy places within the greater New
-              Vrindaban.
+              the glory and beauty of the Dhama thus he founded Dham Seva, a
+              non-profit entity designed to identify, excavate, glorify and
+              protect the various holy places within the greater New Vrindaban.
             </p>
           </article>
         </div>
-
-        
       </section>
 
       <section className="page-content">
-      <article className="excerpt-content">
+        <article className="excerpt-content">
           <div className="page-content-center">
             <header>
               <h2 className="excerpt-title">
-                Selected excerpts from Srila Prabhupada’s letters on <br />
-                New Vrindaban
+                Selected excerpts from Srila Prabhupada’s letters <br />
+                on New Vrindaban
               </h2>
               <StaticImage
                 src="../assets/images/excerpts.jpg"
