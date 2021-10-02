@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Sri-Dhama",
+    "slug": "sri-dhama",
+    "fontColor": "#140704",
+    "bgColor": "#C3D480",
+    "image": "./images/sri-dhama.jpg"
+  },
+  {
+    "title": "Govardhan Katha",
+    "slug": "govardhan-katha",
+    "fontColor": "#F5F3F1",
+    "bgColor": "#92A441",
+    "image":  "./images/govardhan-katha.jpg"
+  },
+  {
+    "title": "Nature Meditations",
+    "slug": "nature-meditations",
+    "fontColor": "#F5F3F1",
+    "bgColor": "#9B7657",
+    "image":  "./images/nature-meditations.jpg"
+  },
+  {
+    "title": "Simple Living",
+    "slug": "simple-living",
+    "fontColor": "#140704",
+    "bgColor": "#F6E9B5",
+    "image":  "./images/simple-living.jpg"
+  },
+  {
+    "title": "Sadhu-Sanga, Guru-Disciple",
+    "slug": "sadhu-sanga",
+    "fontColor": "#F5F3F1",
+    "bgColor": "#C84B47",
+    "image":  "./images/sadhu-sanga.jpg"
+  },
+  {
+    "title": "Relationships",
+    "slug": "relationships",
+    "fontColor": "#140704",
+    "bgColor": "#F8C59F",
+    "image":  "./images/relationships.jpg"
+  },
+  {
+    "title": "Personalities",
+    "slug": "personalities",
+    "fontColor": "#F5F3F1",
+    "bgColor": "#83529C",
+    "image":  "./images/personalities.jpg"
+  },
+  {
+    "title": "Miscellaneous",
+    "slug": "miscellaneous",
+    "fontColor": "#140704",
+    "bgColor": "#FFFC9E",
+    "image":  "./images/miscellaneous.jpg"
+  },
+  {
+    "title": "Festivals",
+    "slug": "festivals",
+    "fontColor": "#140704",
+    "bgColor": "#CAD1E9",
+    "image":  "./images/festivals.jpg"
+  }
+]

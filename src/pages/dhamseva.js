@@ -86,7 +86,7 @@ const Dham = (props) => {
               />
 
               <Quote
-                color="yellow"
+                color="pink"
                 quote="Therefore, I may once more request you to try your best to construct New Vrindabn as an exact duplicate of Vrindavana and that will give me the highest pleasure."
                 author="Srila Prabhupada letter, 18 February 1970"
               />

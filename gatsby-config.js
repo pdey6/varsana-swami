@@ -13,6 +13,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./catHeaders`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

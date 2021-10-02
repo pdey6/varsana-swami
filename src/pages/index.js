@@ -5,6 +5,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import SEO from "../components/SEO";
 import Writings from "../components/Writings";
 
+import styled from "styled-components";
+
 import wave1 from "../assets/images/wave-1.svg";
 
 const HomePage = ({ data }) => {
@@ -72,40 +74,120 @@ const HomePage = ({ data }) => {
           </article>
         </section>
         <Writings writings={writings} />
-        <section className="founder">
-          <StaticImage
-            src="../assets/images/founder.jpg"
-            alt="founder"
-            className="founder-img"
-          />
-          <div className="founder-info">
-            <h3 className="founder-info-title">His Divine Grace</h3>
-            <h2 className="founder-info-swami">
-              A.C. Bhaktivedanta Swami Prabhupada
-            </h2>
-            <h3 className="founder-info-iskcon">
-              Founder-Acharya of the International Society for Krishna
-              Consciousness
-            </h3>
-            <div className="founder-info-links">
-              <a href="https://prabhupada.krishna.com/">
-                https://prabhupada.krishna.com/
-              </a>
-              <a href="https://prabhupadavani.org/">
-                https://prabhupadavani.org/
-              </a>
-              <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
-                https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
-              </a>
-            </div>
+        <FounderStyled>
+          <div className="inner-container">
+            <ContentStyled>
+              <ImageStyled>
+                <StaticImage
+                  src="../assets/images/founder.jpg"
+                  alt="founder"
+                  className="image"
+                />
+              </ImageStyled>
+              <TextStyled>
+                <h3>His Divine Grace</h3>
+                <h2 className="swami">A.C. Bhaktivedanta Swami Prabhupada</h2>
+                <h3 className="iskcon">
+                  Founder-Acharya of the International Society for Krishna
+                  Consciousness
+                </h3>
+                <div className="links">
+                  <a href="https://prabhupada.krishna.com/">
+                    https://prabhupada.krishna.com/
+                  </a>
+                  <a href="https://prabhupadavani.org/">
+                    https://prabhupadavani.org/
+                  </a>
+                  <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
+                    https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
+                  </a>
+                </div>
+              </TextStyled>
+            </ContentStyled>
           </div>
-        </section>
+        </FounderStyled>
       </main>
     </>
   );
 };
 
 export default HomePage;
+
+const FounderStyled = styled.section`
+  padding: 3em 0;
+
+  font-family: "Roboto", sans-serif;
+`;
+const ContentStyled = styled.div`
+  @media (min-width: 800px) {
+    display: flex;
+
+    
+  }
+`;
+
+const ImageStyled = styled.div`
+  .image {
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 800px) {
+    .image {
+      width: 100%;
+      min-width: 504px;
+      min-height: 306px;
+    }
+  }
+`;
+
+const TextStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 2em 0 0 2em;
+  padding-left: 1em;
+
+  h3 {
+    font-size: clamp(0.8rem, 3vw, 1.4rem);
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+
+  .swami {
+    margin: 0.5em 0;
+
+    font-size: clamp(1rem, 3vw, 1.8rem);
+  }
+
+  .iskcon {
+    text-align: center;
+    width: 98%;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 1em;
+  }
+
+  .links {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .links a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: var(--dark);
+    overflow-wrap: anywhere;
+  }
+
+  @media (min-width: 800px) {
+    width: 100%;
+
+    .swami {
+      text-align: center;
+    }
+  }
+`;
 
 export const query = graphql`
   {

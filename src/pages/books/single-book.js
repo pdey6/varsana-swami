@@ -2,15 +2,20 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Quote from "../../components/Quote";
 
+import styled from "styled-components";
+
 const Books = () => {
   return (
-    <main className="page">
+    <Wrapper className="page">
       <header className="page-header">
-        <StaticImage
-          src="../../assets/images/books-photo.jpg"
-          alt=""
-          className="single-book-header-img"
-        />
+        <div className="center">
+          <StaticImage
+            src="../../assets/images/books-photo.jpg"
+            alt=""
+            className="single-book-header-img"
+          />
+        </div>
+
         <div className="quotes">
           <Quote
             color="yellow"
@@ -153,8 +158,29 @@ const Books = () => {
           </article>
         </div>
       </section>
-    </main>
+    </Wrapper>
   );
 };
 
 export default Books;
+
+const Wrapper = styled.main`
+  margin-top: 3rem;
+
+  .page-header,
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .center {
+    margin: 0 auto;
+  }
+
+  .single-book-img {
+    max-width: 600px;
+    margin: 1em auto 1.75em;
+  }
+  
+`;

@@ -7,12 +7,47 @@ import { Link, graphql } from "gatsby";
 
 const PostTemplate = ({ data }) => {
   const post = data.markdownRemark;
+  const posts = data.allMarkdownRemark.edges
   const { previous, next } = data;
+  const header = data.catsJson
 
   console.log(post);
 
   return (
     <Wrapper>
+      <header>
+        <GatsbyImage
+          image={header.image.childImageSharp.gatsbyImageData}
+          alt={header.title}
+          className="banner"
+        />
+
+        <div style={{ backgroundColor: `${header.bgColor}` }}>
+          <div className="writing-category">
+            <h1 style={{ color: `${header.fontColor}` }} className="cat-title">
+              {header.title}
+            </h1>
+            <ul className="cat-list">
+              {posts.map((post) => {
+                return (
+                  <li
+                    key={post.node.fields.slug}
+                    style={{ color: `${header.fontColor}` }}
+                  >
+                    <Link
+                      to={post.node.fields.slug}
+                      style={{ color: `${header.fontColor}` }}
+                      activeStyle={{ fontWeight: 900 }}
+                    >
+                      {post.node.frontmatter.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </header>
       <article>
         <GatsbyImage
           image={getImage(post.frontmatter.image)}
@@ -53,6 +88,16 @@ const Wrapper = styled.section`
   margin: 0 auto;
   margin-bottom: 4rem;
 
+  .writing-category {
+    display: flex;
+    align-items: center;
+    margin-left: 280px;
+    padding: 2em 0;
+    margin-bottom: 8rem;
+
+    font-family: "Montserrat", sans-serif;
+  }
+
   article {
     display: flex;
     flex-direction: column;
@@ -87,7 +132,25 @@ export const query = graphql`
     $id: String!
     $previousPostId: String
     $nextPostId: String
+    $category: String!
   ) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { in: [$category] } } }
+    ) {
+      edges {
+        node {
+          html
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -116,6 +179,16 @@ export const query = graphql`
       }
       frontmatter {
         title
+      }
+    }
+    catsJson(slug: { eq: $category }) {
+      title
+      fontColor
+      bgColor
+      image {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
       }
     }
   }

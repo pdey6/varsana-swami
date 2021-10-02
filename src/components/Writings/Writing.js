@@ -64,7 +64,20 @@ const Wrapper = styled.article`
   }
 
   button {
-    align-self: flex-start;
+    align-self: baseline;
+
+    margin-top: auto;
+    padding: 0.5em 1.5em;
+    border: none; 
+    background-color: var(--grey);
+
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--dark);
+
+    outline: none; 
   }
 
   button a {
@@ -85,18 +98,6 @@ const Wrapper = styled.article`
     :nth-child(even) > div:nth-child(odd) {
       order: 2;
     }
-
-  .writing-date {
-    
-  }
-
-  .writing-title {
-    
-  }
-
-  .writing-excerpt {
-    
-  }
 
     .writing-img {
       height: 100%;
