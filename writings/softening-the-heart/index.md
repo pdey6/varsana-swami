@@ -2,7 +2,7 @@
 title: Softening the Heart
 date: 2018-12-29
 category: 'sadhu-sanga'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Krishna Consciousness is meant to soften the steel framed heart. The hard layers of pride, enmity, jealousy, cynicism, and criticism cover the heart; thus the soul cannot manifest its natural and gentle qualities. As the anarthas are gradually cleansed, the glorious and devotional nature of the soul can shine through, expressing itself in the full spectrum of kindness, compassion, and love.

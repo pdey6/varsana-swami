@@ -2,7 +2,7 @@
 title: Maya-devi’s Bewildering Spell
 date: 2018-12-29
 category: 'personalities'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Maha-maya, the great material energy, activates the unlimited worlds and keeps the jiva souls bound in the shackles of passion and ignorance. She is very subtle yet extremely powerful. So perfect is the illusion she casts over the conditioned souls that not a single person even wants to escape from the prison house of material existence.

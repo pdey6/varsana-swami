@@ -33,9 +33,10 @@ export const query = graphql`
           slug
         }
         frontmatter {
+          title
           category
           date(formatString: "MMMM, Do YYYY")
-          image {
+          cover {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
             }

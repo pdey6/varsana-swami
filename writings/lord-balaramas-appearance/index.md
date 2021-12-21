@@ -2,7 +2,7 @@
 title: Lord Balarama’s Appearance
 date: 2018-12-29
 category: 'festivals'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 The appearance of Vasudeva, the Supreme Personality of Godhead as revealed to Devaki, offers the answer to all sectarian differences and varieties of iconography related to the Divine. His appearance is possible when the channels of aural reception are opened by humility and submission to the bona ide representative of the Lord. Only then will the Holy Name and lila of Krishna enter into the kingdom of our hearts.

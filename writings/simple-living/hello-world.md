@@ -2,7 +2,7 @@
 title: Hello World
 date: 2018-12-29
 category: 'simple-living'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 This is my first blog post. Hello World!

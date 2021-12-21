@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components"
+import styled from "styled-components";
+
 
 const AudioFile = ({name, secure_url}) => {
   return (
@@ -15,6 +16,12 @@ export default AudioFile;
 
 const Wrapper = styled.article`
   margin-bottom: 1em;
+
+  h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'monospace'; 
+  }
 
   audio {
     width: 100%;

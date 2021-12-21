@@ -2,7 +2,7 @@
 title: "Govardhana's Moon Tower"
 date: 2018-12-29
 category: 'govardhan-katha'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 "The moon tower standing at Govardhan between Syama kunda and Lalita kunda awards a bird's eye view of a significant portion of the dham. The tower offers a variety of services to both the Deities and to Their devotees as they take turns watching over one another. It signifies our watchful and yearning search of the countryside for indications of Krishna's pastimes. In reciprocation, Sri Sri Radha Gopinath and Ananga Manjari spend time in the moon tower on nice days when the wind is not strong and remind us of Their watchful and yearning search for indications of our return home.

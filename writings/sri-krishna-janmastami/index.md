@@ -2,7 +2,7 @@
 title: Sri Krishna Janmastami
 date: 2018-12-29
 category: 'festivals'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 "One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna." (BG 4.9)

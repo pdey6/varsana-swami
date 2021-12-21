@@ -2,7 +2,7 @@
 title: Rasa, Vrindavana’s architecture and art
 date: 2018-12-29
 category: 'sri-dhama'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Sri Krishna is the Source, Object and Abode of rasa. It is inherent within Him, He knows and feels it yet He cannot relish it, for the flavor He (and everyone) aspires to taste can only be experienced in the exchange, the sharing, and the reciprocation of love.

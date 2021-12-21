@@ -1,69 +1,79 @@
+const _ = require("lodash")
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/post-template.js`)
+  const postTemplate = path.resolve(`src/templates/postTemplate.js`)
+  const categoryTemplate = path.resolve(`src/templates/categoryTemplate.js`)
 
-  // Get all markdown blog posts sorted by date
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
+  return graphql(`
+  {
+    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+      edges {
+        node {
+          html
+          fields {
+            slug
+          }
+          frontmatter {
+            category
           }
         }
       }
-    `
-  )
-
-  if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
-      result.errors
-    )
-    return
+    }
   }
+  `).then(result => {
+    if (result.errors) {
+      return Promise.reject(result.errors)
+    }
 
-  const posts = result.data.allMarkdownRemark.nodes
+    const posts = result.data.allMarkdownRemark.edges
 
+    // create category pages
+    let categories = []
 
+    // Iterate through each post, putting all found categories into `categories`
+    _.each(posts, edge => {
+      if (_.get(edge, "node.frontmatter.category")) {
+        categories = categories.concat(edge.node.frontmatter.category)
+      }
+    })
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+    // Eliminate duplicate categories
+    categories = _.uniq(categories)
 
+    posts.forEach(({ node }) => {
       createPage({
-        path: post.fields.slug,
-        component: blogPost,
+        path: node.fields.slug,
+        component: postTemplate,
         context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
+          slug: node.fields.slug,
+          category: node.frontmatter.category,
         },
       })
     })
-  }
+
+    // Make category pages
+    categories.forEach(category => {
+      createPage({
+        path: `/${_.kebabCase(category)}/`,
+        component: categoryTemplate,
+        context: { category },
+      })
+    })
+  })
 }
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `writings` })
+    const value = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: value,
     })
   }
 }

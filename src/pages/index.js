@@ -144,9 +144,11 @@ const TextStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin-top: 1rem; 
 
-  margin: 2em 0 0 2em;
-  padding-left: 1em;
+  /* margin: 2em 0 0 2em;
+  padding-left: 1em; */
 
   h3 {
     font-size: clamp(0.8rem, 3vw, 1.4rem);
@@ -202,7 +204,7 @@ export const query = graphql`
           title
           category
           date(formatString: "MMMM, Do YYYY")
-          image {
+          cover {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
             }

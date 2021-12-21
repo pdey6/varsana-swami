@@ -2,7 +2,7 @@
 title: Mere Reflection
 date: 2018-12-29
 category: 'nature-meditations'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Braja-lila is the primordial revelation of pristine beauty, glory, and meaning. The material nature is the reflection of that divine realm; it has substance even though it is temporary. Mother nature is not ours to enjoy or renounce; we are to study under her to learn crucial lessons. She points to something beyond herself, to the reality of which she is a mere reflection.

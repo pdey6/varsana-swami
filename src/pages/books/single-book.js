@@ -19,7 +19,7 @@ const Books = () => {
         <div className="quotes">
           <Quote
             color="yellow"
-            quote="It is truly a monumental presentation of deep devotion to Sri Dhama"
+            quote="It is truly a monumental presentation of deep devotion to Sri Dhama."
             author="Candramauli Swami"
           />
 
@@ -31,7 +31,7 @@ const Books = () => {
 
           <Quote
             color="pink"
-            quote="The photo book fills our heart with joy and attraction for Sri Sri Radha and Krishna and Their enchanting abode.."
+            quote="The photo book fills our heart with joy and attraction for Sri Sri Radha and Krishna and Their enchanting abode."
             author="Sacinandana Swami"
           />
         </div>

@@ -2,7 +2,7 @@
 title: Lessons from the Leaves
 date: 2018-12-29
 category: 'nature-meditations'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Growing up, I spent as much time as I could on my grandparents’ farm. As soon as I could walk, one of my duties was to herd the cows to the only large shade tree in the cows’ favorite part of the pasture. It was an old American chestnut tree, the only one I am aware of having survived the American chestnut blight in the late 1800’s. This tree is mentioned in books about the history of the American chestnut.

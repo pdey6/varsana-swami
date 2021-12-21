@@ -4,14 +4,12 @@ import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { Link, graphql } from "gatsby";
+import leaf from "../assets/css/leaf.png";
 
 const PostTemplate = ({ data }) => {
-  const post = data.markdownRemark;
-  const posts = data.allMarkdownRemark.edges
-  const { previous, next } = data;
-  const header = data.catsJson
-
-  console.log(post);
+  const { frontmatter, html } = data.markdownRemark;
+  const posts = data.allMarkdownRemark.edges;
+  const header = data.catsJson;
 
   return (
     <Wrapper>
@@ -48,62 +46,35 @@ const PostTemplate = ({ data }) => {
           </div>
         </div>
       </header>
-      <article>
-        <GatsbyImage
-          image={getImage(post.frontmatter.image)}
-          alt={post.frontmatter.title}
-          className="writing-img"
-        />
-        <h2 className="writing-title">{post.frontmatter.title}</h2>
+      <article className="writing">
+        <div className="cover-wrapper">
+          <GatsbyImage
+            image={getImage(frontmatter.cover)}
+            alt={frontmatter.title}
+            className="writing-img"
+          />
+        </div>
+        <h2 className="writing-title">{frontmatter.title}</h2>
         <section
           className="writing-body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: html }}
         />
       </article>
-      <nav>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  width: 88vw;
-  max-width: 880px;
+
   margin: 0 auto;
   margin-bottom: 4rem;
 
-  .writing-category {
-    display: flex;
-    align-items: center;
-    margin-left: 280px;
-    padding: 2em 0;
-    margin-bottom: 8rem;
-
-    font-family: "Montserrat", sans-serif;
-  }
 
   article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 880px;
+    margin: 0 auto;
 
-    margin-top: 4rem;
+    background: #fbfaf9;
   }
 
   h2 {
@@ -111,6 +82,7 @@ const Wrapper = styled.section`
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 800;
+    text-align: center;
   }
 
   p {
@@ -128,15 +100,10 @@ const Wrapper = styled.section`
 `;
 
 export const query = graphql`
-  query GetSinglePost(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-    $category: String!
-  ) {
+  query PostTemplate($category: String!, $slug: String!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { in: [$category] } } }
+      sort: { fields: frontmatter___date }
     ) {
       edges {
         node {
@@ -151,36 +118,6 @@ export const query = graphql`
         }
       }
     }
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        category
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
     catsJson(slug: { eq: $category }) {
       title
       fontColor
@@ -188,6 +125,17 @@ export const query = graphql`
       image {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        cover {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }

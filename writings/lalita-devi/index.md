@@ -2,7 +2,7 @@
 title: "Lalita-devi dasi stewardess of Lalita kunda"
 date: 2016-07-15
 category: 'govardhan-katha'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 All the kundas in New Vrindaban embody and hold a deep, sweet devotional principal. Lalita-kunda specifically testifies to the truth that no one, not even Krishna Himself, can approach Radha’s kunda, service, or mercy without the blessings of Srimati Lalita Devi. And Radha complies with this principle by remaining ever submissive to the loving and protective will of Her senior sakhi. Lord Caitanya further extended this principle by placing Svarup Damodar (Lalita Devi’s form in Gaura lila) as the guardian of devotional mellows.

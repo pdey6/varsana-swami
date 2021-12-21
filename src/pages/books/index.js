@@ -33,7 +33,7 @@ const Books = (props) => {
                 </p>
                 <p>
                   Maharaja’s photo book is an invitation to realize and enter
-                  its deeper, magical dimensions of Sri Dhama. It offers a
+                  deeper, magical dimensions of Sri Dhama. It offers a
                   tangible glimpse of this enchanted realm, not easily seen...
                 </p>
                 <button>
@@ -66,7 +66,7 @@ export default Books;
 
 const BooksContent = styled.div`
   margin-top: 1.5rem;
-  padding-bottom: 8rem;
+  padding-bottom: 0;
 
   .book {
     display: flex;
@@ -77,6 +77,7 @@ const BooksContent = styled.div`
 
   .book-info {
     flex: 1;
+    border-bottom: 3px solid var(--grey);
   }
 
   .bold {
@@ -87,7 +88,11 @@ const BooksContent = styled.div`
     display: flex;
     flex-direction: column;
 
-    padding: 0;
+    padding-bottom: 2rem;
+  }
+
+  .book-info p:first-child {
+    margin-top: 1em;
   }
 
   .book-info p {
@@ -102,7 +107,7 @@ const BooksContent = styled.div`
     border: none;
     background-color: var(--grey);
 
-    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-size: 1rem;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     text-decoration: none;
@@ -116,6 +121,8 @@ const BooksContent = styled.div`
   }
 
   @media (min-width: 800px) {
+    padding-bottom: 8rem;
+
     .book {
       flex-direction: row;
     }

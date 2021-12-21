@@ -2,7 +2,7 @@
 title: "Cleansing the Dhama: The Spirituality of Dust"
 date: 2018-12-29
 category: 'govardhan-katha'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 The wonders of the spiritual world are endless, and the mercy that the dhama extends to her devotees is quite unique. The entire planet of Goloka is comprised of chintamani, wish-fulfilling touchstone, capable of imparting whatever spiritual perfection the pilgrim may desire.

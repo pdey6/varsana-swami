@@ -2,7 +2,7 @@
 title: Love, trust and cooperation
 date: 2020-01-17
 category: 'sadhu-sanga'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 The most essential of the last instructions of Srila Prabhupada and Srila Bhaktisiddhanta are love, trust and cooperation. These must be honored above and beyond all others. Adhering to them, everything will be fulfilled.

@@ -2,7 +2,7 @@
 title: Mirror
 date: 2018-12-29
 category: 'relationships'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 A mirror shows a crude reflection of our physical form. That image, being static, will not reveal deeper aspects of our selves and our connection with Krishna, or relations with others. Only in the reflective dynamics of relationships with others are we truly confronted with our conditioned self in order to uncover our true selves.

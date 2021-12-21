@@ -2,7 +2,7 @@
 title: Seeing Everything as Inherently Divine
 date: 2018-12-29
 category: 'nature-meditations'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 The great souls teach us, and show by example, how devotees must interact with one another and with the whole environment, in order to evoke the divine nature (Yoga-maya) to reveal herself as she is. Until we are deeply steeped in an attitude of humility, we need to respect the concept of the inferior (Maha-maya) nature as the response of Durga, Mother Parvati to our rebellious mentality, our desire to enjoy, control and exploit.

@@ -2,7 +2,7 @@
 title: Grace
 date: 2018-12-29
 category: 'sadhu-sanga'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 The life of the great devotes is enriched with the sweetness of loving devotion, humility, and compassion, which attracts our hearts toward Krishna and away from the attachment to material illusion. Krishna cannot resist the heart rending prayers of His devotees. And when they favor us, He takes charge of our lives by activating and orchestrating everything in creation to help bring us home.

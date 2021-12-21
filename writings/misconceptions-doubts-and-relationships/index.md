@@ -2,7 +2,7 @@
 title: Misconceptions, doubts and relationships
 date: 2018-12-29
 category: 'relationships'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Misconceptions and doubts need to be exposed to the light of loving relationships and submissive inquiry, where they cannot endure. Due to pride we conceal them, and thus they grow and fester in the darkness of the heart. There is always pride, which goes before the fall; therefore humility is the most important ingredient in the cultivation of bhakti.

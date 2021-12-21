@@ -2,7 +2,7 @@
 title: Loving Relationships
 date: 2018-12-29
 category: 'relationships'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 An experience of Krishna and taste of devotional service is proportional to the spiritual quality of our relationships. The Lord is irresistibly drawn to loving dealings between devotees. He reveals Himself in and through loving relationships, for which He is the source and the hope.

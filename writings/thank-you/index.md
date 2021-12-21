@@ -2,7 +2,7 @@
 title: Thank you
 date: 2018-12-29
 category: 'miscellaneous'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Krishna is arranging everything to help us come home. Though it might be bitter like a neem leaf, it is nonetheless medicinal, beneficial and helps to cure the disease. The prayer of our heart becomes: ‘Thank you Krishna for whatever you send to me, for you are my kind, loving father, Who sometimes gives rewards and other times punishment. Only You know what is good for me, surely I do not and you try to help me as I turn to you”.

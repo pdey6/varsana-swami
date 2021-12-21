@@ -2,7 +2,7 @@
 title: Lotus Design
 date: 2018-12-29
 category: 'sri-dhama'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Rising from the mud below, blossoming from above, the lotus offers the archetypal emblem of beauty, purity, and primordial nature. The lotus is the form Sri Dhama reveals herself in.

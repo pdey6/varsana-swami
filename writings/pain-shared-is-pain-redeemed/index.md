@@ -2,7 +2,7 @@
 title: Pain shared is pain redeemed
 date: 2018-12-29
 category: 'relationships'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Becoming overwhelmed by fears and insecurities and paralyzed by our own pain may be a sign that proper vaisnava relations are deficient. Pain however, can be an effective guide. It can teach us where to turn or where to reach, where to touch and be touched.

@@ -2,7 +2,7 @@
 title: Heart and Community
 date: 2020-01-15
 category: 'miscellaneous'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Everyone yearns for a community where loving relationships flourish, for such is our other home. And yet today we witness an epidemic in which the death of love testifies to the abortion of culture as a consequence of desecration our Mother Earth.

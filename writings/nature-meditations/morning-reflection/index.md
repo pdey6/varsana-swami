@@ -1,8 +1,8 @@
 ---
 title: "Morning Reflection"
 date: 2018-12-29
-category: 'govardhan-katha'
-image: "./cover.jpg"
+category: 'nature-meditations'
+cover: "./cover.jpg"
 ---
 
 As the sun rises over the reddish horizon and dissipates the morning fog, the beauty of the fields, forests, and pasturing grounds become illuminated, serving as a backdrop for Sri Sri Radha Gopinath’s various pastime places at Govardhan Hill in New Vrindaban.

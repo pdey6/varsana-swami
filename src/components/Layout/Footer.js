@@ -30,6 +30,7 @@ const Footer = () => {
               <FaMapMarkerAlt className="footer-icon" />
               <div>
                 <p>3759 McCreary's Ridge Rd</p>
+                <p>NBU 31</p>
                 <p>Moundsville, WV 26041</p>
               </div>
             </div>

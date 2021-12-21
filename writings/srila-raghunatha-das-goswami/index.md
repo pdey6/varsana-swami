@@ -2,7 +2,7 @@
 title: Srila Raghunatha das Goswami
 date: 2018-12-29
 category: 'personalities'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Srila Raghunatha das Goswami, our prayojana acharya, is renowned for his humility.

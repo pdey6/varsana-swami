@@ -2,7 +2,7 @@
 title: Images of Home
 date: 2018-12-29
 category: 'sri-dhama'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 RAn excerpt from the photo book Appreciating New Vrindaban-Dhama:

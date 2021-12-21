@@ -28,7 +28,14 @@
     "image":  "./images/simple-living.jpg"
   },
   {
-    "title": "Sadhu-Sanga, Guru-Disciple",
+    "title": "Vyasa Puja Offerings",
+    "slug": "vyasa-puja",
+    "fontColor": "#140704",
+    "bgColor": "#F6E9B5",
+    "image":  "./images/simple-living.jpg"
+  },
+  {
+    "title": "Sadhu-Sanga Guru-Disciple",
     "slug": "sadhu-sanga",
     "fontColor": "#F5F3F1",
     "bgColor": "#C84B47",

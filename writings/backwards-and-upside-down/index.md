@@ -2,7 +2,7 @@
 title: Backwards and upside down
 date: 2020-01-15
 category: 'miscellaneous'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 The mind is supposed to be under the guidance of intelligence, which is supposed to adhere to the dictates of the soul, the servant of the Supersoul. However, in the material world everything is backwards and upside down. Thus the conditioned soul follows the orders of the senses, which dictate to the mind, which dictate to the intelligence, which dictates to the soul, who dictates to the Supersoul.

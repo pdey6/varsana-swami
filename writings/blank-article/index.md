@@ -2,7 +2,7 @@
 title: "Tundavik"
 date: 2018-12-29
 category: 'govardhan-katha'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Tundavik, the resident peacock of Radha-kunda who is devoted to delivering fresh feathers for Gopinath’s turban, patiently oversaw Lalita’s planting of flowers (photo caption 2). As soon as Lalita completed this service, Tundavik rushed on site (see action photo).

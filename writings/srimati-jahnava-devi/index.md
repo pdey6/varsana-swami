@@ -2,7 +2,7 @@
 title: Srimati Jahnava-devi
 date: 2018-12-29
 category: 'personalities'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 Lord Nityananda’s wife, Srimati Jahnava-devi, has a confidential relationship with Gopinath.

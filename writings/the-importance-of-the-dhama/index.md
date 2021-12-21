@@ -2,7 +2,7 @@
 title: The Importance of the Dhama
 date: 2018-12-29
 category: 'sri-dhama'
-image: "./cover.jpg"
+cover: "./cover.jpg"
 ---
 
 For Gaudiya Vaisnavas, “back to home” means specifically Vrindavan or Navadwip Dhama (not Vaikuntha, Dwarka, Ayodya, or even Mathura). Prema-sankirtan, which descends from Goloka Vrindavan, is both the means and the goal of entrance into Vraja. Prema-sankirtan is the continuous chanting of the Holy Names of Sri Sri Radha and Krishna:
