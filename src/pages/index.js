@@ -19,7 +19,7 @@ const HomePage = ({ data }) => {
       <SEO title="Home" />
       <main className="home-page">
         <header>
-          <div className="hero">
+          <figure className="hero">
             <StaticImage
               src="../assets/images/hero.jpg"
               alt="pond"
@@ -27,10 +27,10 @@ const HomePage = ({ data }) => {
               placeholder="tracedSVG"
               layout="fullWidth"
             />
-          </div>
-          <img src={wave1} alt="wave" className="wave wave-up" />
-          <div className="welcome">
-            <div className="welcome-center">
+          </figure>
+          <div className="welcome-wrap">
+            <img src={wave1} alt="wave" className="wave wave-up" />
+            <section className="welcome">
               <article>
                 <h3>Welcome</h3>
                 <p>
@@ -52,27 +52,31 @@ const HomePage = ({ data }) => {
                 <p></p>
                 <h2 className="welcome-signature">Varsana Swami</h2>
               </article>
-              <StaticImage
-                src="../assets/images/welcome.jpg"
-                alt="portrait"
-                className="welcome-img"
-              />
-            </div>
+              <figure>
+                <StaticImage
+                  src="../assets/images/welcome.jpg"
+                  alt="portrait"
+                  className="welcome-image"
+                />
+              </figure>
+            </section>
           </div>
         </header>
-        <section className="photo-book">
-          <StaticImage
-            src="../assets/images/photo-book.jpg"
-            alt="photo-book"
-            className="photo-book-img"
-          />
-          <article className="photo-book-info">
-            <div className="photo-book-text-box">
-              <h2>Photo Book</h2>
-              <p>Appreciating New Vrindaban-dhama</p>
-            </div>
-          </article>
-        </section>
+        <div className="photo-book-wrap">
+          <section className="photo-book">
+            <StaticImage
+              src="../assets/images/photo-book.jpg"
+              alt="photo-book"
+              className="photo-book-img"
+            />
+            <article className="photo-book-info">
+              <div className="photo-book-text-box">
+                <h2>Photo Book</h2>
+                <p>Appreciating New Vrindaban-dhama</p>
+              </div>
+            </article>
+          </section>
+        </div>
         <Writings writings={writings} />
         <FounderStyled>
           <div className="inner-container">
@@ -121,8 +125,6 @@ const FounderStyled = styled.section`
 const ContentStyled = styled.div`
   @media (min-width: 800px) {
     display: flex;
-
-    
   }
 `;
 
@@ -145,7 +147,7 @@ const TextStyled = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 1rem; 
+  margin-top: 1rem;
 
   /* margin: 2em 0 0 2em;
   padding-left: 1em; */
