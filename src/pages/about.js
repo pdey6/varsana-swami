@@ -5,8 +5,8 @@ import styled from "styled-components";
 const About = (props) => {
   return (
     <main className="page">
+      <h2 className="page-title"> Varsana Swami </h2>
       <header className="page-header">
-        <h2 className="page-title"> Varsana Swami </h2>
         <div className="page-hero">
           <StaticImage
             src="../assets/images/about-1.jpg"

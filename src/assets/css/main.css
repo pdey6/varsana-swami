@@ -6,7 +6,7 @@
 
 /*
 =============== 
-Variables
+# Variables
 ===============
 */
 
@@ -26,20 +26,20 @@ Variables
    * Grey 
    * =======*/
   --clr-grey: #fafbfc;
-  --clr-grey-10: #eaedf3;
+  --clr-grey-10: #e3e6e9;
+  /* --clr-grey-10: #eaedf3; */
   --clr-grey-20: #e2e7ef;
   --clr-grey-30: #dbe0ea;
   --clr-grey-40: #d3dae6;
   --clr-grey-50: #cbd3e1;
 
-  
   /* 
   * Typography
   * ==================*/
   --f-headings: "Montserrat", sans-serif;
   --f-body: "Montserrat", sans-serif;
   --f-spacing: 1px;
-  
+
   /* 
    * Box Shadows 
    * ==================*/
@@ -54,7 +54,7 @@ Variables
   /* 
    * Other Stuff
    * ==================*/
-  --borderRadius: 1rem;
+  --radius: 1rem;
   --transition: 0.3s ease-in-out all;
   --max-width: 96vw;
 }
@@ -154,6 +154,10 @@ nav {
   box-shadow: var(--shadow-2);
 }
 
+figure {
+  margin: 0;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -179,137 +183,11 @@ button:hover,
   border: 2px solid var(--clr-black);
 }
 
-
-
 /*
 =============== 
-# Photo Book 
+# Pages
 ===============
 */
-
-.photo-book {
-  background: #f4f1f3;
-
-  display: grid;
-  grid-template-areas: 
-    "pb-figure"
-    "pb-info"
-  ;
-}
-
-.photo-book-figure {
-  grid-area: pb-figure;
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.photo-book-img {
-  
-}
-
-
-.photo-book-info {
-  grid-area: pb-info;
-
-  margin-top: -6rem;
-  padding-top: 8rem;
-  padding-bottom: 1rem;
-
-  background: var(--clr-red);
-
-  font-family: "Montserrat", sans-serif;
-  color: var(--clr-white);
-}
-
-.photo-book-info h2 {
-  margin-bottom: 0;
-
-  font-family: inherit;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.photo-book-info p {
-  margin-bottom: 0;
-
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.photo-book-text-box {
-  margin-top: -1em;
-  text-align: center;
-}
-
-
-@media screen and (min-width: 992px) {
-  .photo-book {
-    background: var(--clr-red);
-  
-    grid-template-areas: 
-      "pb-figure pb-info"
-    ;
-  }
-
-  .photo-book-figure {  
-    max-width: 100%;
-    margin: 0 10rem;
-  }
-
-  .photo-book-img {
-    display: block;
-    margin: 0 auto; 
-    margin-top: -4rem;
-    width: 50%;
-  }
-  
-
-  .photo-book-info {
-    grid-area: pb-info;
-  
-    margin-top: 0;
-    padding: 0.75em 0;
-    margin-right: 14rem; 
-  }
-
-  .photo-book-text-box {
-    margin-top: 0;
-  }
-
-  .photo-book-info h2 {
-    font-size: 1.6rem;
-  }
-
-  .photo-book-info p {
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-  }
-
-  
-}
-
-/* 
-? WRITINGS 
-! ================*/
-.writings {
-  background: #fbfaf9;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 992px) {
-  .writings {
-    width: 80vw;
-    margin: 0 auto;
-    padding: 0 1em;
-  }
-}
-
-/* 
-# Pages
-? =============================================  */
 
 .page {
   max-width: var(--max-width);
@@ -328,7 +206,7 @@ button:hover,
   letter-spacing: 1px;
   text-align: center;
   padding: 0.25em 0;
-  margin-bottom: ;
+  margin-top: 0.5em;
 }
 
 .page-hero-img {
@@ -379,7 +257,6 @@ button:hover,
   .page-title {
     padding: 0.25em 0;
   }
-  
 
   .page-header {
     max-width: 70%;
@@ -411,152 +288,30 @@ button:hover,
   }
 }
 
-/* 
-? Dham-Seva 
-# ================*/
-
-.excerpt-content {
-  background: linear-gradient(179.45deg, #f5f3f1 20.41%, #fbfaf9 95.35%);
-}
-
-.excerpt-title {
-  padding: 1em;
-
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-align: center;
-  line-height: 125%;
-}
-
-.excerpt-quotes {
-  margin-top: 2rem;
-}
-
-.excerpt-letters h2 {
-  font-size: inherit;
-}
-
-@media screen and (min-width: 992px) {
-  .dham-img {
-    margin-top: 1rem;
-    height: 34ch;
-  }
-
-  .dham-info p:last-child {
-    margin-bottom: 0;
-  }
-
-  .excerpt-img {
-    display: block;
-    border-radius: 1rem;
-  }
-}
-
-/* 
-# Components 
-! =============================================  */
-
-
-
-.quote-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3em;
-  margin-bottom: 1em;
-  border-radius: 0.5rem;
-  padding: 1em;
-}
-
-.quote {
-  margin: 0;
-  padding: 0 0.25em;
-
-  font-size: 1.3rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-}
-
-.author {
-  margin: 0;
-
-  font-size: 1.3rem;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: 2px;
-  text-align: right;
-}
-
-.gallery:first-child {
-  margin-top: 0;
-}
-
-.gallery {
-  margin-top: 3rem;
-}
-
-.image-grid {
-  display: grid;
-  grid-gap: 0.5rem;
-  grid-auto-rows: minmax(50px, auto);
-}
-.image-grid .image-item:nth-child(5n) {
-  grid-column-end: span 2;
-}
-.image-grid img {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 992px) {
-  .wave-up {
-    margin-top: -6rem;
-  }
-
-  .gallery {
-    margin-top: 8rem;
-  }
-
-  .gallery .folder-title {
-    margin-bottom: 1em;
-  }
-
-  .image-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-}
-
 /*
- * Writings  
- */
+===============
+# Writings
+===============
+*/
+
+.writings {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
 
 .writing {
   padding: 0 0.5em;
+  max-width: 880px;
+  margin: 0 auto;
+  background: #fbfaf9;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #dddddd;
-  border-radius: 8px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(241, 241, 241);
-  border-radius: 8px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.writing h2 {
+  margin: 1em 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 .writing-category {
@@ -564,17 +319,14 @@ button:hover,
   flex-direction: column;
   max-width: 1350px;
   margin: 0 auto;
-
   padding: 1em 0;
-
   margin-bottom: 1rem;
   font-family: "Montserrat", sans-serif;
 }
 
 .cat-title {
-
   margin: 0 0.5rem;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   font-size: 2.5rem;
   font-weight: 800;
   text-transform: capitalize;
@@ -630,7 +382,6 @@ button:hover,
   }
 
   .cat-title {
-
     align-self: center;
     margin-left: 3em;
     width: 38%;
@@ -652,11 +403,10 @@ button:hover,
   }
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus,
+.nav-link:hover {
   color: var(--clr-black);
 }
-
-
 
 /*
 =============== 
@@ -678,7 +428,7 @@ button:hover,
 }
 
 .green {
-  background: var(-clr--clr-green);
+  background: var(--clr-green);
 }
 
 .pink {
@@ -694,3 +444,30 @@ button:hover,
   margin-top: -3rem;
 }
 
+@media screen and (min-width: 992px) {
+  .wave-up {
+    margin-top: -6rem;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dddddd;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(241, 241, 241);
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

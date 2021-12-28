@@ -55,6 +55,15 @@ const Welcome = () => {
 export default Welcome;
 
 const Wrapper = styled.header`
+  .hero {
+    margin: 0;
+  }
+
+  .welcome-wrap {
+    background: var(--clr-pink);
+    background: linear-gradient(182.36deg, #e8c9df 24.69%, #f4f1f3 102.14%);
+  }
+
   .welcome {
     display: grid;
     grid-template-areas:
@@ -76,7 +85,7 @@ const Wrapper = styled.header`
   .welcome-image {
     display: block;
     margin: 0 auto;
-    border-radius: var(--borderRadius);
+    border-radius: var(--radius);
   }
 
   .welcome h3 {
@@ -109,24 +118,16 @@ const Wrapper = styled.header`
     .hero {
       position: relative;
       z-index: -5;
-    }
-
-    .hero-img {
-      border-radius: var(--borderRadius);
-    }
-
-    .welcome-wrap {
-      background: var(--clr-pink);
-      background: linear-gradient(182.36deg, #e8c9df 24.69%, #f4f1f3 102.14%);
-      margin-top: -1rem;
-    }
-
-    .hero {
       height: 70%;
     }
 
     .hero-img {
+      border-radius: var(--radius);
       border-radius: 0;
+    }
+
+    .welcome-wrap {
+      margin-top: -1rem;
     }
 
     .welcome-wrap {
@@ -144,11 +145,6 @@ const Wrapper = styled.header`
       grid-template-areas: "w-article w-figure";
       margin-top: -1.25rem;
       padding: 0 1em 1em;
-    }
-
-    .welcome {
-      grid-template-columns: 1fr 350px;
-      align-items: center;
       gap: 6%;
       width: 80vw;
       margin: 0 auto;

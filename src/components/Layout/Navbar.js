@@ -69,6 +69,8 @@ const Navbar = () => {
 export default Navbar;
 
 const Wrapper = styled.nav`
+  display: flex;
+  justify-content: center;
   padding-bottom: 1rem;
 
   .site-title {
@@ -90,11 +92,6 @@ const Wrapper = styled.nav`
     color: var(--clr-black);
   }
 
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .nav-center {
     width: 90vw;
     max-width: var(--max-width);
@@ -146,7 +143,6 @@ const Wrapper = styled.nav`
     color: var(--clr-black);
     font-size: 1.5rem;
     text-transform: uppercase;
-    text-align: center;
     letter-spacing: var(--f-spacing);
     transition: var(--transition);
   }
@@ -179,6 +175,8 @@ const Wrapper = styled.nav`
     transition: var(--transition);
     text-transform: capitalize;
   }
+
+  
 
   @media screen and (min-width: 992px) {
     .site-title {

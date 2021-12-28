@@ -27,11 +27,11 @@ const Writing = ({ excerpt, frontmatter, fields}) => {
 
 const Wrapper = styled.article`
   padding: 2em 0;
-  border-bottom: 3px solid var(--grey);
+  border-bottom: 3px solid var(--clr-grey-10);
 
 
   .writing-img {
-    border-radius: var(--borderRadius);
+    border-radius: var(--radius);
   }
 
   .writing-info {
@@ -73,7 +73,7 @@ const Wrapper = styled.article`
     margin-top: auto;
     padding: 1em 1.25em;
     border: none; 
-    background-color: var(--grey);
+    background-color: var(--clr-grey-10);
 
     
     text-decoration: none;

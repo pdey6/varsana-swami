@@ -5,35 +5,33 @@ import { StaticImage } from "gatsby-plugin-image";
 const Founder = () => {
   return (
     <Wrapper className="founder">
-      <div className="inner-container">
-        <div className="founder-info">
-          <figure>
-            <StaticImage
-              src="../assets/images/founder.jpg"
-              alt="founder"
-              className="image"
-            />
-          </figure>
-          <div className="founder-text-box">
-            <h3>His Divine Grace</h3>
-            <h2 className="swami">A.C. Bhaktivedanta Swami Prabhupada</h2>
-            <h3 className="iskcon">
-              Founder-Acharya of the International Society for Krishna
-              Consciousness
-            </h3>
-            <div className="links">
-              <a href="https://prabhupada.krishna.com/">
-                https://prabhupada.krishna.com/
-              </a>
-              <a href="https://prabhupadavani.org/">
-                https://prabhupadavani.org/
-              </a>
-              <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
-                https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
-              </a>
-            </div>
+      <div className="founder-info">
+        <figure className="founder-figure">
+          <StaticImage
+            src="../assets/images/founder.jpg"
+            alt="founder"
+            className="image"
+          />
+        </figure>
+        <article className="founder-text-box">
+          <h3>His Divine Grace</h3>
+          <h2 className="swami">A.C. Bhaktivedanta Swami Prabhupada</h2>
+          <h3 className="iskcon">
+            Founder-Acharya of the International Society for Krishna
+            Consciousness
+          </h3>
+          <div className="links">
+            <a href="https://prabhupada.krishna.com/">
+              https://prabhupada.krishna.com/
+            </a>
+            <a href="https://prabhupadavani.org/">
+              https://prabhupadavani.org/
+            </a>
+            <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
+              https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
+            </a>
           </div>
-        </div>
+        </article>
       </div>
     </Wrapper>
   );
@@ -42,19 +40,32 @@ const Founder = () => {
 export default Founder;
 
 const Wrapper = styled.section`
-  padding: 3em 0;
+  padding: 3em 1em;
 
   font-family: "Roboto", sans-serif;
+
+  .founder-info {
+    display: grid;
+    grid-template-areas:
+      "f-figure"
+      "f-article";
+    width: 80%;
+    margin: 0 auto;
+    gap: 6%;
+  }
+
+  .founder-figure {
+    grid-area: f-figure;
+  }
 
   .founder-text-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 
-    /* margin: 2em 0 0 2em;
-  padding-left: 1em; */
+    grid-area: f-article;
   }
 
   .founder-text-box h3 {
@@ -93,6 +104,11 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 768px) {
+    .founder-info {
+      display: grid;
+      grid-template-areas: "f-figure f-article";
+    }
+
     .founder-text-box {
       width: 100%;
     }

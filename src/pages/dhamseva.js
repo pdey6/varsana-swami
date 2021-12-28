@@ -2,12 +2,13 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Quote from "../components/Quote";
 import Letter from "../components/Letter";
+import styled from "styled-components";
 
 const Dham = (props) => {
   return (
-    <main className="page">
+    <Wrapper className="page">
+      <h2 className="page-title">Dham Seva Project</h2>
       <header className="page-header">
-        <h2 className="page-title">Dham Seva Project</h2>
         <div className="page-hero">
           <StaticImage
             src="../assets/images/dham.jpg"
@@ -159,8 +160,49 @@ const Dham = (props) => {
           </div>
         </article>
       </section>
-    </main>
+    </Wrapper>
   );
 };
 
 export default Dham;
+
+const Wrapper = styled.main`
+  .excerpt-content {
+  background: linear-gradient(179.45deg, #f5f3f1 20.41%, #fbfaf9 95.35%);
+}
+
+.excerpt-title {
+  padding: 1em;
+
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 125%;
+}
+
+.excerpt-quotes {
+  margin-top: 2rem;
+}
+
+.excerpt-letters h2 {
+  font-size: inherit;
+}
+
+@media screen and (min-width: 992px) {
+  .dham-img {
+    margin-top: 1rem;
+    height: 34ch;
+  }
+
+  .dham-info p:last-child {
+    margin-bottom: 0;
+  }
+
+  .excerpt-img {
+    display: block;
+    border-radius: 1rem;
+  }
+}
+`
