@@ -302,10 +302,17 @@ button:hover,
 
 .page-hero-info {
   font-family: "Marck Script", cursive;
+  max-width: 96vw;
+  margin: 0 auto;
 }
 
 .page-hero-info p {
   font-size: 1.4rem;
+}
+
+.page-content-center {
+  max-width: 96vw;
+  margin: 0 auto;
 }
 
 .page-content p {
@@ -352,7 +359,7 @@ button:hover,
   }
 
   .page-content-center {
-    max-width: 70%;
+    max-width: 70vw;
     margin: 0 auto;
   }
 

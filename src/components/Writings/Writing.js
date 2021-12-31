@@ -95,7 +95,7 @@ const Wrapper = styled.article`
     grid-template-columns: 1fr 1fr; 
     column-gap: 5rem;
 
-    padding: 4em 0;
+    padding: 3em 0;
 
     :nth-child(odd) > div:nth-child(even) {
       order: 1;
@@ -118,6 +118,7 @@ const Wrapper = styled.article`
       margin-top: 0;
       margin-bottom: 0.75em;
     }
+
   }
 `;
 

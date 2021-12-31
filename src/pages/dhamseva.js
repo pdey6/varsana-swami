@@ -66,8 +66,8 @@ const Dham = (props) => {
           <div className="inner-mw">
             <header>
               <h2 className="excerpt-title">
-                Selected excerpts from Srila Prabhupada’s letters on <br />
-                New Vrindaban
+                Selected excerpts from Srila Prabhupada’s letters <br />
+                on New Vrindaban
               </h2>
               <StaticImage
                 src="../assets/images/excerpts.jpg"
