@@ -5,19 +5,21 @@ import { StaticImage } from "gatsby-plugin-image";
 const PhotoBook = () => {
   return (
     <Wrapper className="photo-book">
-      <figure className="photo-book-figure">
-        <StaticImage
-          src="../assets/images/photo-book.jpg"
-          alt="photo-book"
-          className="photo-book-img"
-        />
-      </figure>
-      <article className="photo-book-info">
-        <div className="photo-book-text-box">
-          <h2>Photo Book</h2>
-          <p>Appreciating New Vrindaban-dhama</p>
-        </div>
-      </article>
+      <div className="inner-mw grid">
+        <figure>
+          <StaticImage
+            src="../../assets/images/photo-book.jpg"
+            alt="photo-book"
+            className="img"
+          />
+        </figure>
+        <article>
+          <div className="text-box">
+            <h2>Photo Book</h2>
+            <p>Appreciating New Vrindaban-dhama</p>
+          </div>
+        </article>
+      </div>
     </Wrapper>
   );
 };
@@ -27,18 +29,20 @@ export default PhotoBook;
 const Wrapper = styled.section`
   background: #f4f1f3;
 
-  display: grid;
-  grid-template-areas:
-    "pb-figure"
-    "pb-info";
-
-  .photo-book-figure {
-    grid-area: pb-figure;
-    max-width: 80%;
-    margin: 0 auto;
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "pb-figure"
+      "pb-info";
   }
 
-  .photo-book-info {
+  figure {
+    grid-area: pb-figure;
+    display: flex;
+    justify-content: center;
+  }
+
+  article {
     grid-area: pb-info;
 
     margin-top: -6rem;
@@ -51,7 +55,7 @@ const Wrapper = styled.section`
     color: var(--clr-white);
   }
 
-  .photo-book-info h2 {
+  .text-box h2 {
     margin-bottom: 0;
 
     font-family: inherit;
@@ -59,7 +63,7 @@ const Wrapper = styled.section`
     font-weight: 700;
   }
 
-  .photo-book-info p {
+  .text-box p {
     margin-bottom: 0;
 
     font-family: inherit;
@@ -68,7 +72,7 @@ const Wrapper = styled.section`
     font-style: italic;
   }
 
-  .photo-book-text-box {
+  .text-box {
     margin-top: -1em;
     text-align: center;
   }
@@ -76,37 +80,36 @@ const Wrapper = styled.section`
   @media screen and (min-width: 992px) {
     background: var(--clr-red);
 
-    grid-template-areas: "pb-figure pb-info";
-
-    .photo-book-figure {
-      max-width: 100%;
-      margin: 0 10rem;
+    .grid {
+      grid-template-areas: "pb-figure pb-info";
+      margin-top: -1rem;
     }
 
-    .photo-book-img {
-      display: block;
-      margin: 0 auto;
+    figure {
+      margin-left: 4rem; 
+    }
+
+    .img {
+      max-height: 167px;
       margin-top: -4rem;
-      width: 50%;
     }
 
-    .photo-book-info {
+    article {
       grid-area: pb-info;
 
       margin-top: 0;
       padding: 0.75em 0;
-      margin-right: 14rem;
     }
 
-    .photo-book-text-box {
+    .text-box {
       margin-top: 0;
     }
 
-    .photo-book-info h2 {
+    .text-box h2 {
       font-size: 1.6rem;
     }
 
-    .photo-book-info p {
+    .text-box p {
       font-size: 1.5rem;
       letter-spacing: 4px;
     }

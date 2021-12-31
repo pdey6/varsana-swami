@@ -17,7 +17,7 @@ const Category = ({ data }) => {
           className="banner"
         />
         <div style={{ backgroundColor: `${header.bgColor}` }}>
-          <div className="writing-category">
+          <div className="writing-category inner-mw">
             <h1 style={{ color: `${header.fontColor}` }} className="cat-title">
               {header.title}
             </h1>
@@ -26,7 +26,7 @@ const Category = ({ data }) => {
                 return (
                   <li
                     key={post.node.fields.slug}
-                    style={{ color: `${header.fontColor}` }}
+                    style={{ color: `${header.fontColor}`}}
                   >
                     <Link
                       to={post.node.fields.slug}

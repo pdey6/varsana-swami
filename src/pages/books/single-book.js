@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 import Quote from "../../components/Quote";
 
 import styled from "styled-components";
@@ -7,14 +8,23 @@ import styled from "styled-components";
 const Books = () => {
   return (
     <Wrapper className="page">
-      <header className="page-header">
-        <div className="center">
+      <div className="inner-mw">
+        <article className="purchase">
+        <Link
+            to="/purchase"
+          >
+            Purchase
+          </Link>
+      
+        </article>
+
+        <figure className="center">
           <StaticImage
             src="../../assets/images/books-photo.jpg"
             alt=""
             className="single-book-header-img"
           />
-        </div>
+        </figure>
 
         <div className="quotes">
           <Quote
@@ -35,10 +45,8 @@ const Books = () => {
             author="Sacinandana Swami"
           />
         </div>
-      </header>
 
-      <section className="page-content">
-        <div className="page-content-center">
+        <section className="page-content">
           <article>
             <StaticImage
               src="../../assets/images/cover1.jpg"
@@ -156,8 +164,8 @@ const Books = () => {
             </blockquote>
             <p className="author">- Candramauli Swami </p>
           </article>
-        </div>
-      </section>
+        </section>
+      </div>
     </Wrapper>
   );
 };
@@ -167,20 +175,35 @@ export default Books;
 const Wrapper = styled.main`
   margin-top: 3rem;
 
-  .page-header,
   article {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .center {
-    margin: 0 auto;
-  }
-
   .single-book-img {
     max-width: 600px;
     margin: 1em auto 1.75em;
   }
-  
+
+  .purchase {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-radius: 0.5rem;
+    padding: 1em;
+    background-color: var(--clr-grey-10); 
+  }
+
+  .purchase a {
+    margin: 0;
+    padding: 0 0.25em;
+    text-align: center;
+
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    
+  }
 `;

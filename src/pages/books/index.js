@@ -7,14 +7,11 @@ import styled from "styled-components";
 const Books = (props) => {
   return (
     <main className="page">
-      <header className="page-header">
-        <h2 className="page-title">Books</h2>
-      </header>
-
-      <section className="page-content">
-        <div className="page-content-center">
+      <div className="inner-mw">
+        <h2 className="page-title border-b">Books</h2>
+        <section className="page-content">
           <BooksContent className="books">
-            <div className="book">
+            <div className="book border-b">
               <Link to="/books/single-book">
                 <div className="book-img-container">
                   <StaticImage
@@ -33,8 +30,8 @@ const Books = (props) => {
                 </p>
                 <p>
                   Maharaja’s photo book is an invitation to realize and enter
-                  deeper, magical dimensions of Sri Dhama. It offers a
-                  tangible glimpse of this enchanted realm, not easily seen...
+                  deeper, magical dimensions of Sri Dhama. It offers a tangible
+                  glimpse of this enchanted realm, not easily seen...
                 </p>
                 <button>
                   <Link to="/books/single-book"> Read More </Link>
@@ -56,8 +53,8 @@ const Books = (props) => {
               </div>
             </div>
           </BooksContent>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 };
@@ -65,14 +62,12 @@ const Books = (props) => {
 export default Books;
 
 const BooksContent = styled.div`
-  margin-top: 1.5rem;
+ 
   padding-bottom: 0;
 
   .book {
     display: flex;
     flex-direction: column;
-
-    margin-bottom: 3em;
   }
 
   .book-info {
@@ -101,11 +96,11 @@ const BooksContent = styled.div`
 
   button {
     align-self: baseline;
+    margin-top: 0.5em;
 
-    margin-top: 1.25em;
     padding: 0.5em 1.5em;
     border: none;
-    background-color: var(--grey);
+    background-color: var(--clr-grey-10);
 
     font-size: 1rem;
     font-family: "Roboto", sans-serif;
@@ -120,25 +115,29 @@ const BooksContent = styled.div`
     color: inherit;
   }
 
-  @media (min-width: 800px) {
-    padding-bottom: 8rem;
+  @media (min-width: 768px) {
 
     .book {
       flex-direction: row;
+      align-items: center;
+      margin-bottom: 2em; 
     }
 
     .book-info {
-      padding: 0 0 0 2em;
+      padding-left: 2em;
+      align-self: flex-start; 
     }
 
     .book-img {
       width: 100%;
       height: 100%;
+      min-width: 440px;
+      min-height: 350px;
     }
 
     .book-img-container {
       min-width: 440px;
-      min-height: 350px; 
+      min-height: 350px;
     }
   }
 `;

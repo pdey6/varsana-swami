@@ -19,7 +19,7 @@ const PostTemplate = ({ data }) => {
         />
 
         <div style={{ backgroundColor: `${header.bgColor}` }}>
-          <div className="writing-category">
+          <div className="writing-category inner-mw">
             <h1 style={{ color: `${header.fontColor}` }} className="cat-title">
               {header.title}
             </h1>

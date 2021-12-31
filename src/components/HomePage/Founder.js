@@ -4,34 +4,35 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Founder = () => {
   return (
-    <Wrapper className="founder">
-      <div className="founder-info">
-        <figure className="founder-figure">
-          <StaticImage
-            src="../assets/images/founder.jpg"
-            alt="founder"
-            className="image"
-          />
-        </figure>
-        <article className="founder-text-box">
-          <h3>His Divine Grace</h3>
-          <h2 className="swami">A.C. Bhaktivedanta Swami Prabhupada</h2>
-          <h3 className="iskcon">
-            Founder-Acharya of the International Society for Krishna
-            Consciousness
-          </h3>
-          <div className="links">
-            <a href="https://prabhupada.krishna.com/">
-              https://prabhupada.krishna.com/
-            </a>
-            <a href="https://prabhupadavani.org/">
-              https://prabhupadavani.org/
-            </a>
-            <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
-              https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
-            </a>
-          </div>
-        </article>
+    <Wrapper>
+      <div className="inner-mw">
+        <div className="info">
+          <figure>
+            <StaticImage
+              src="../../assets/images/founder.jpg"
+              alt="founder"
+              className="image"
+            />
+          </figure>
+          <article>
+            <h3>His Divine Grace</h3>
+            <h2>A.C. Bhaktivedanta Swami Prabhupada</h2>
+            <h4>
+              Acharya of the International Society for Krishna Consciousness
+            </h4>
+            <div className="links">
+              <a href="https://prabhupada.krishna.com/">
+                https://prabhupada.krishna.com/
+              </a>
+              <a href="https://prabhupadavani.org/">
+                https://prabhupadavani.org/
+              </a>
+              <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
+                https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
     </Wrapper>
   );
@@ -41,57 +42,49 @@ export default Founder;
 
 const Wrapper = styled.section`
   padding: 3em 1em;
-
   font-family: "Roboto", sans-serif;
 
-  .founder-info {
-    display: grid;
-    grid-template-areas:
-      "f-figure"
-      "f-article";
-    width: 80%;
+  .info {
+    display: flex;
+    flex-direction: column;
+
     margin: 0 auto;
     gap: 6%;
   }
 
-  .founder-figure {
-    grid-area: f-figure;
+  figure {
+    border-radius: 1rem;
   }
 
-  .founder-text-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  article {
     text-align: center;
-    /* margin-top: 1rem; */
-
-    grid-area: f-article;
+    overflow-wrap: break-word;
   }
 
-  .founder-text-box h3 {
-    font-size: clamp(0.8rem, 3vw, 1.4rem);
+  article h3 {
+    font-size: 1.2rem;
     margin-bottom: 0;
     font-weight: 700;
   }
 
-  .founder-text-box .swami {
+  article h2 {
     margin: 0.5em 0;
     font-size: clamp(1rem, 3vw, 1.8rem);
   }
 
-  .founder-text-box .iskcon {
+  article h4 {
     text-align: center;
     width: 98%;
     font-size: clamp(1rem, 3vw, 1.2rem);
     margin-bottom: 1em;
   }
 
-  .founder-text-box .links {
+  article .links {
     margin: 0 auto;
     max-width: 100%;
   }
 
-  .founder-text-box .links a {
+  .links a {
     display: block;
     text-decoration: none;
     text-align: center;
@@ -103,24 +96,25 @@ const Wrapper = styled.section`
     border-radius: 1rem;
   }
 
-  @media (min-width: 768px) {
-    .founder-info {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 1em;
+
+
+    .info {
       display: grid;
-      grid-template-areas: "f-figure f-article";
+      grid-template-columns: 1fr 1fr;
     }
 
-    .founder-text-box {
+    figure .image {
       width: 100%;
+      height: 100%;
     }
 
-    .founder-text-box .swami {
-      text-align: center;
-    }
-
-    .image {
-      width: 100%;
-      min-width: 504px;
-      min-height: 306px;
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content:space-between; 
+      height: 443px;
     }
   }
 `;

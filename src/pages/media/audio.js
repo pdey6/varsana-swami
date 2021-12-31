@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Playlist from "../../components/Playlist";
-import {
-  CAccordion,
-  CAccordionBody,
-  CAccordionItem,
-  CAccordionHeader,
-} from "@coreui/react";
+import Accordion from "../../components/Accordion";
 import styled from "styled-components";
 
 const Audio = ({ data }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const twentyone = data.twentyone.nodes;
   const twenty = data.twenty.nodes;
   const nineteen = data.nineteen.nodes;
@@ -31,40 +28,80 @@ const Audio = ({ data }) => {
   return (
     <Wrapper>
       <main className="page">
-        <header className="page-header">
+        <div className="inner-mw">
           <h2 className="page-title media-title yellow">Audio</h2>
-        </header>
+          <section className="page-content">
+            <div className="accordion">
+              <header
+                onClick={() => setIsOpen(!isOpen)}
+                className="folder-title"
+              >
+                Yearly
+                <div style={{ float: "right" }}>
+                  {!isOpen && <span>&#9650;</span>}
+                  {isOpen && <span>&#9660;</span>}
+                </div>
+              </header>
+              <div className="yearly">
+                {isOpen && (
+                  <Accordion>
+                    <div label="2021">
+                      <Playlist playlist={twentyone} />
+                    </div>
+                    <div label="2020">
+                      <Playlist playlist={twenty} />
+                    </div>
+                    <div label="2019">
+                      <Playlist playlist={nineteen} />
+                    </div>
+                    <div label="2018">
+                      <Playlist playlist={eighteen} />
+                    </div>
+                    <div label="2017">
+                      <Playlist playlist={seventeen} />
+                    </div>
+                    <div label="2016">
+                      <Playlist playlist={sixteen} />
+                    </div>
+                    <div label="2015">
+                      <Playlist playlist={fifteen} />
+                    </div>
+                    <div label="2014">
+                      <Playlist playlist={fourteen} />
+                    </div>
+                    <div label="2012">
+                      <Playlist playlist={twelve} />
+                    </div>
+                    <div label="2011">
+                      <Playlist playlist={eleven} />
+                    </div>
+                  </Accordion>
+                )}
+              </div>
+            </div>
 
-        <section className="page-content">
-          <div className="page-content-center">
-            <CAccordion flush>
-              <CAccordionItem itemKey={1}>
-                <CAccordionHeader className="folder-title folder-margin-bottom">
-                  Yearly
-                </CAccordionHeader>
-                <CAccordionBody>
-                  <Playlist playlist={twentyone} title="2021" />
-                  <Playlist playlist={twenty} title="2020" />
-                  <Playlist playlist={nineteen} title="2019" />
-                  <Playlist playlist={eighteen} title="2018" />
-                  <Playlist playlist={seventeen} title="2017" />
-                  <Playlist playlist={sixteen} title="2016" />
-                  <Playlist playlist={fifteen} title="2015" />
-                  <Playlist playlist={fourteen} title="2014" />
-                  <Playlist playlist={twelve} title="2012" />
-                  <Playlist playlist={eleven} title="2011" />
-                </CAccordionBody>
-              </CAccordionItem>
-            </CAccordion>
-
-            <Playlist playlist={festivals} title="Festivals" />
-            <Playlist playlist={various} title="Various" />
-            <Playlist playlist={srimad} title="Srimad Bhagavatam" />
-            <Playlist playlist={chaitanya} title="Chaitanya-caritamrta" />
-            <Playlist playlist={bhagavad} title="Bhagavad-gita" />
-            <Playlist playlist={kirtans} title="Bhajans & Kirtans" />
-          </div>
-        </section>
+            <Accordion>
+              <div label="Festivals">
+                <Playlist playlist={festivals} />
+              </div>
+              <div label="Various">
+                <Playlist playlist={various} />
+              </div>
+              <div label="Srimad Bhagavatam">
+                <Playlist playlist={srimad} />
+              </div>
+              <div label="Chaitanya-caritamrta">
+                <Playlist playlist={chaitanya} />
+              </div>
+              <div label="Bhagavad-gita">
+                <Playlist playlist={bhagavad} />
+              </div>
+              <div label="Bhajans & Kirtans">
+                <Playlist playlist={kirtans} />
+              </div>
+            </Accordion>
+          </section>
+        </div>
       </main>
     </Wrapper>
   );
@@ -72,41 +109,31 @@ const Audio = ({ data }) => {
 
 export default Audio;
 
-
-
 const Wrapper = styled.div`
-  
+  .page-title {
+    margin-bottom: 1em;
+  }
+
 
   .folder-title {
-    margin: 1.5em 0;
-    background-color: var(--green);
+    background-color: var(--clr-green);
+    margin-bottom: 1em;
+  }
+
+  .yearly .folder-title {
+    background-color: var(--clr-grey-10);
   }
 
   .folder-margin-bottom {
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
 
-  .accordion-button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    font-weight: 800;
-    padding: 0.25em 2rem;
-    font-size: 2rem;
-    text-align: left;
-    /* background-color: #fff; */
-    background-color: inherit;
-    border: 0;
-    border-radius: 0;
-    overflow-anchor: none;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-      border-radius 0.15s ease;
+  @media screen and (min-width: 992px) {
+    .accordion > div {
+      margin-bottom: 1em;
+    }
   }
 `;
-
 
 export const query = graphql`
   {
@@ -333,4 +360,3 @@ export const query = graphql`
     }
   }
 `;
-

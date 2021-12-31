@@ -10,13 +10,13 @@ const Writing = ({ excerpt, frontmatter, fields}) => {
 
   return (
     <Wrapper>
-      <GatsbyImage image={getImage(cover)} alt={title} className="writing-img" />
-      <div className="writing-info">
-        <span className="writing-date">{date}</span>
-        <h3 className="writing-title">{title}</h3>
-        <p className="writing-excerpt">{excerpt}</p>
+      <GatsbyImage image={getImage(cover)} alt={title} className="image" />
+      <div className="info">
+        <span className="date">{date}</span>
+        <h3 className="title">{title}</h3>
+        <p className="excerpt">{excerpt}</p>
         <button>
-          <Link to={slug} className="writing-link">
+          <Link to={slug} className="link">
             Read More
           </Link>
         </button>
@@ -30,17 +30,17 @@ const Wrapper = styled.article`
   border-bottom: 3px solid var(--clr-grey-10);
 
 
-  .writing-img {
+  .image {
     border-radius: var(--radius);
   }
 
-  .writing-info {
+  .info {
     display: flex;
     flex-direction: column;
     margin-top: 1rem; 
   }
 
-  .writing-date {
+  .date {
     margin-top: 0.75em;
 
     font-size: clamp(0.8rem, 3vw, 1rem);
@@ -50,19 +50,19 @@ const Wrapper = styled.article`
     color: #897a76;
   }
 
-  .writing-title {
+  .title {
     margin-bottom: 0.5em;
 
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
   }
 
 
-  .writing-excerpt {
+  .excerpt {
     margin-bottom: 1em;
 
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
   }
@@ -84,7 +84,7 @@ const Wrapper = styled.article`
 
   button a {
     color: var(--black);
-    font-size: 1.1rem; 
+    font-size: 1rem; 
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     color: var(--dark);
@@ -92,7 +92,7 @@ const Wrapper = styled.article`
 
   @media (min-width: 992px) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr; 
     column-gap: 5rem;
 
     padding: 4em 0;
@@ -105,12 +105,12 @@ const Wrapper = styled.article`
       order: 2;
     }
 
-    .writing-img {
+    .image {
       height: 100%;
-      max-height: 25rem;
+      /* max-height: 25rem; */
     }
 
-    .writing-info {
+    .info {
       margin-top: 0; 
     }
 

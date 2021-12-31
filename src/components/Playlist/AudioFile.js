@@ -15,7 +15,8 @@ export default AudioFile;
 
 
 const Wrapper = styled.article`
-  margin-bottom: 1em;
+  margin: 2em;
+  max-width: 90%;
 
   h5 {
     font-size: 1.25rem;

@@ -3,11 +3,10 @@ import GalleryPhoto from "./GalleryPhoto";
 import styled from "styled-components";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
-const Gallery = ({ gallery, title }) => {
+const Gallery = ({ gallery }) => {
   return (
     <Wrapper>
       <div className="gallery">
-        <h2 className="folder-title yellow">{title}</h2>
         <SimpleReactLightbox>
           <SRLWrapper>
             <div className="image-grid">
@@ -25,6 +24,7 @@ const Gallery = ({ gallery, title }) => {
 export default Gallery;
 
 const Wrapper = styled.div`
+  
   .gallery:first-child {
     margin-top: 0;
   }

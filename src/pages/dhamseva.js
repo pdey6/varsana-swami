@@ -9,32 +9,36 @@ const Dham = (props) => {
     <Wrapper className="page">
       <h2 className="page-title">Dham Seva Project</h2>
       <header className="page-header">
-        <div className="page-hero">
-          <StaticImage
-            src="../assets/images/dham.jpg"
-            alt="dham seva"
-            className="page-hero-img dham-img"
-          />
-          <article className="page-hero-info dham-info">
-            <h3>Dham Seva's Mission</h3>
-            <p>
-              To award a voice to the Dham and her subjects so as to promote and
-              facilitate the cultivation of relationships between pilgrims, the
-              holy Dham, and her residents.
-            </p>
-            <p>
-              To facilitate the gathering of pilgrims for the purpose of hearing
-              and discussing theology and pastimes to better understand the
-              significance and blessings of the holy places.
-            </p>
-          </article>
+        <div className="inner-mw">
+          <div className="page-hero">
+            <figure>
+              <StaticImage
+                src="../assets/images/dham.jpg"
+                alt="dham seva"
+                className="page-hero-img dham-img image"
+              />
+            </figure>
+
+            <article className="page-hero-info dham-info">
+              <h3>Dham Seva's Mission</h3>
+              <p>
+                To award a voice to the Dham and her subjects so as to promote
+                and facilitate the cultivation of relationships between
+                pilgrims, the holy Dham, and her residents.
+              </p>
+              <p>
+                To facilitate the gathering of pilgrims for the purpose of
+                hearing and discussing theology and pastimes to better
+                understand the significance and blessings of the holy places.
+              </p>
+            </article>
+          </div>
         </div>
       </header>
 
       <section className="page-content">
-        <div className="page-content-center">
+        <div className="inner-mw">
           <article>
-          
             <p>
               Following the order of Lord Caitanya, the Six Goswamis of
               Vrindavan under-went great sacrifices to establish temples and
@@ -49,19 +53,17 @@ const Dham = (props) => {
               Imbibing the instructions of Srila Prabhupada, His Holiness
               Varsana Swami has been carving out landscapes throughout New
               Vrindaban since 1972. His heart is vested in seeing and revealing
-              the glory and beauty of the Dhama thus he founded Dham Seva, a non-profit entity designed to identify, excavate,
-              glorify and protect the various holy places within the greater New
-              Vrindaban.
+              the glory and beauty of the Dhama thus he founded Dham Seva, a
+              non-profit entity designed to identify, excavate, glorify and
+              protect the various holy places within the greater New Vrindaban.
             </p>
           </article>
         </div>
-
-        
       </section>
 
       <section className="page-content">
-      <article className="excerpt-content">
-          <div className="page-content-center">
+        <article className="excerpt-content">
+          <div className="inner-mw">
             <header>
               <h2 className="excerpt-title">
                 Selected excerpts from Srila Prabhupada’s letters on <br />
@@ -111,7 +113,7 @@ const Dham = (props) => {
               />
 
               <Letter
-                title="Letter to Hayagriva Los Angeles"
+                title="Letter to Hayagriva, Los Angeles"
                 date="18 November 1968"
                 body="
               Vrindaban conception is a transcendental village, without any botheration of the modern industrial atmosphere. My idea of developing New Vrindaban is to create an atmosphere of spiritual life where people in bona fide order of social division, namely, Brahmacaris, Grhasthas, Vanaprastha, Sannyasis, or specifically Brahmacaris and Sannyasis, and Vanaprasthas, will live there independently, completely depending on agricultural produce and milk from the cows.
@@ -120,7 +122,7 @@ const Dham = (props) => {
               />
 
               <Letter
-                title="Letter to Kirtanananda Los Angeles "
+                title="Letter to Kirtanananda, Los Angeles "
                 date="18 February 1970"
                 body="
               Now I am hopeful that our New Vrindaban will be an exact replica of Vrindavan in India. I think it was ordained by Krishna that you went there, took your Sannyasa order of life in the presence of Rupa Goswami and Jiva Goswami, and now you have got the opportunity to execute their will…
@@ -132,7 +134,7 @@ const Dham = (props) => {
               />
 
               <Letter
-                title="Letter to Kirtanananda Vrindaban "
+                title="Letter to Kirtanananda, Vrindaban "
                 date="27 October 1972"
                 body="
               Now we are in Radha-Damodara Temple staying, and the program of speaking morning and evening in the courtyard is going on very nicely. It is the same peaceful atmosphere as your New Vrindaban, and just as in New Vrindaban everyone present is devotee. Actually, everywhere wherever Krishna is being glorified, that is Vrindavan…
@@ -142,7 +144,7 @@ const Dham = (props) => {
               />
 
               <Letter
-                title="Letter to Hladini Calcutta "
+                title="Letter to Hladini, Calcutta "
                 date="28 January 1973"
                 body="
               This modern civilization is always artificial. You are actually learning in New Vrindaban the self-sufficient mode of living, simple living, high thinking, that is our policy, and as long as Krishna remains in the center of all these activities, then you are actually in Vrindavan.
@@ -150,7 +152,7 @@ const Dham = (props) => {
               />
 
               <Letter
-                title="Letter to Kirtanananda Bhaktivedanta Manor "
+                title="Letter to Kirtanananda, Bhaktivedanta Manor "
                 date="27 July 1973"
                 body="
               Yes! Go on acquiring the surrounding lands and in this way we will establish a local self governing village and show all the world a practical example of spiritual life as Krishna Himself exhibited in Vrindavan. Agriculture and protecting the cow, this is the main business of the residents of Vrindavan, and above all simply loving Krishna. The cows, the trees, the cowherd men and Gopis, their chief engagement was loving Krishna, and in New Vrindaban we want to create this atmosphere and thereby show the whole world how practical and sublime our movement is.
@@ -168,41 +170,64 @@ export default Dham;
 
 const Wrapper = styled.main`
   .excerpt-content {
-  background: linear-gradient(179.45deg, #f5f3f1 20.41%, #fbfaf9 95.35%);
-}
-
-.excerpt-title {
-  padding: 1em;
-
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-align: center;
-  line-height: 125%;
-}
-
-.excerpt-quotes {
-  margin-top: 2rem;
-}
-
-.excerpt-letters h2 {
-  font-size: inherit;
-}
-
-@media screen and (min-width: 992px) {
-  .dham-img {
-    margin-top: 1rem;
-    height: 34ch;
+    background: linear-gradient(179.45deg, #f5f3f1 20.41%, #fbfaf9 95.35%);
   }
 
-  .dham-info p:last-child {
-    margin-bottom: 0;
+  .excerpt-title {
+    padding: 1em;
+
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 125%;
   }
 
-  .excerpt-img {
-    display: block;
-    border-radius: 1rem;
+  .excerpt-quotes {
+    margin-top: 2rem;
   }
-}
-`
+
+  .excerpt-letters h2 {
+    font-size: inherit;
+  }
+
+  .excerpt-letters article :not(:last-of-type) {
+    border-bottom: 3px solid var(--clr-grey-10);
+  }
+
+  @media screen and (min-width: 992px) {
+    .dham-info h3 {
+      font-size: 1.3rem;
+    }
+
+    .dham-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    .excerpt-img {
+      display: block;
+      border-radius: 1rem;
+    }
+
+    .page-hero {
+      display: grid;
+      grid-template-areas: "pg-figure pg-article pg-article";
+    }
+
+    .page-hero figure {
+      grid-area: pg-figure;
+    }
+
+    .page-hero article {
+      grid-area: pg-article;
+    }
+
+    .page-hero .image {
+      display: block;
+      margin-top: 0.25rem;
+      height: 95%;
+      border-radius: 1rem;
+    }
+  }
+`;

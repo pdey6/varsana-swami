@@ -1,27 +1,19 @@
-const data = [
+export const writings = [
   {
     id: 1,
     title: 'Writings',
     info: [
       {
+        name: "Drops of Wisdom",
+        route: "/govardhan-katha",
+      },
+      {
+        name: "Miscellaneous",
+        route: "/miscellaneous",
+      },
+      {
         name: "Nature Meditations",
         route: "/nature-meditations",
-      },
-      {
-        name: "Govardhan Katha",
-        route: "/govardhan-katha",
-      },
-      {
-        name: "Simple Living",
-        route: "/simple-living",
-      },
-      {
-        name: "Sadhu-Sanga Guru-Disciple",
-        route: "/govardhan-katha",
-      },
-      {
-        name: "Vyasa Puja Offerings",
-        route: "/vyasa-puja",
       },
       {
         name: "Personalities",
@@ -32,23 +24,30 @@ const data = [
         route: "/relationships",
       },
       {
+        name: "Sadhu-Sanga Guru-Disciple",
+        route: "/sadhu-sanga",
+      },
+      {
+        name: "Simple Living",
+        route: "/simple-living",
+      },
+      {
         name: "Sri Dhama",
         route: "/sri-dhama",
       },
       {
-        name: "Miscellaneous",
-        route: "/miscellaneous",
+        name: "Vyasa Puja Offerings",
+        route: "/vyasa-puja",
       },
     ]
-  },
+  }
+]
+
+export const media = [
   {
     id: 2,
     title: 'Media',
     info: [
-      {
-        name: "Photos",
-        route: "/media/photos",
-      },
       {
         name: "Audio",
         route: "/media/audio",
@@ -57,8 +56,12 @@ const data = [
         name: "Video",
         route: "/media/video",
       },
+      {
+        name: "Photos",
+        route: "/media/photos",
+      },
     ]
   },
-  
 ]
-export default data
+
+

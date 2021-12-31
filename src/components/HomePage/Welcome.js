@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import wave1 from "../../assets/images/wave-1.svg";
+import signature from "../../assets/images/signature.svg";
 
 const Welcome = () => {
   return (
@@ -15,38 +16,41 @@ const Welcome = () => {
           layout="fullWidth"
         />
       </figure>
+
+      <img src={wave1} alt="wave" className="wave wave-up" />
+
       <div className="welcome-wrap">
-        <img src={wave1} alt="wave" className="wave wave-up" />
-        <section className="welcome">
-          <article>
-            <h3>Welcome</h3>
-            <p>
-              With her every breath, our Mother Earth beckons us “listen,
-              awaken, experience, and behold the magnificence of our Lord’s
-              creation”.
-            </p>
-            <p>
-              We hope and pray that by visiting this site you feel more
-              personally connected to the Earth, our Mother, more deeply rooted
-              in Sri Dhama, our Home, and more committed to Sri Nama, our
-              Shelter.
-            </p>
-            <p>
-              May you find inspiration to journey into deeper realms of the
-              heart, as revealed in devotee relationships, to attain Goloka
-              Vrindavan, our final cherished destination.
-            </p>
-            <p></p>
-            <h2 className="welcome-signature">Varsana Swami</h2>
-          </article>
-          <figure>
-            <StaticImage
-              src="../../assets/images/welcome.jpg"
-              alt="portrait"
-              className="welcome-image"
-            />
-          </figure>
-        </section>
+        <div className="inner-mw">
+          <section className="welcome">
+            <article>
+              <h3>Welcome</h3>
+              <p>
+                With her every breath, our Mother Earth beckons us “listen,
+                awaken, experience, and behold the magnificence of our Lord’s
+                creation”.
+              </p>
+              <p>
+                We hope and pray that by visiting this site you feel more
+                personally connected to the Earth, our Mother, more deeply
+                rooted in Sri Dhama, our Home, and more committed to Sri Nama,
+                our Shelter.
+              </p>
+              <p>
+                May you find inspiration to journey into deeper realms of the
+                heart, as revealed in devotee relationships, to attain Goloka
+                Vrindavan, our final cherished destination.
+              </p>
+              <img src={signature} alt="signature" className="signature" />
+            </article>
+            <figure>
+              <StaticImage
+                src="../../assets/images/welcome.jpg"
+                alt="portrait"
+                className="image"
+              />
+            </figure>
+          </section>
+        </div>
       </div>
     </Wrapper>
   );
@@ -82,7 +86,7 @@ const Wrapper = styled.header`
     grid-area: w-figure;
   }
 
-  .welcome-image {
+  .image {
     display: block;
     margin: 0 auto;
     border-radius: var(--radius);
@@ -98,20 +102,14 @@ const Wrapper = styled.header`
 
   .welcome p {
     margin-bottom: 0.25em;
-    font-size: 1.3rem;
+    font-size: 1.24rem;
   }
 
-  .welcome-signature {
+  .signature {
     margin-bottom: 0;
     margin-left: 6.5em;
-
-    font-size: 1.7rem;
-    font-family: inherit;
-    font-weight: 700;
-    /* background-image:  url("/bg-leaf.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;  */
+    display: block;
+    max-width: 14rem;
   }
 
   @media screen and (min-width: 992px) {
@@ -126,18 +124,10 @@ const Wrapper = styled.header`
       border-radius: 0;
     }
 
-    .welcome-wrap {
-      margin-top: -1rem;
-    }
-
-    .welcome-wrap {
-      margin-top: -4rem;
-      width: 100%;
-      height: 88%;
-    }
-
     .welcome article {
       margin-top: -1.5rem;
+      display: flex;
+      flex-direction: column;
     }
 
     .welcome {
@@ -146,25 +136,33 @@ const Wrapper = styled.header`
       margin-top: -1.25rem;
       padding: 0 1em 1em;
       gap: 6%;
-      width: 80vw;
       margin: 0 auto;
       padding: 0 1em;
       margin-top: -3rem;
       padding-bottom: 3rem;
     }
 
+    
     .welcome h3 {
       font-size: 2.25rem;
     }
-
-    .welcome-signature {
-      font-size: 1.8rem;
-      text-align: right;
-      margin-right: 2.6em;
+    
+    .signature {
+      margin-left: 0;
+      align-self: flex-end;
+      margin-top: -1rem;
+      margin-right: 2rem;
+    }
+    
+    .welcome figure {
+      align-self: center;
+      height: 18rem;
+      margin-bottom: 2rem;
     }
 
-    .welcome-img {
+    .image {
       order: 2;
+      height: 100%;
     }
   }
 `;

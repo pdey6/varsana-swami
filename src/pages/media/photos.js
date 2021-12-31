@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Galleries from "../../components/Gallery";
+import Accordion from "../../components/Accordion";
+import styled from "styled-components";
 
 const Photos = ({ data }) => {
   const summer = data.summer.nodes;
@@ -11,28 +13,48 @@ const Photos = ({ data }) => {
   const devi = data.devi.nodes;
 
   return (
-    <main className="page">
-      <header className="page-header">
+    <Wrapper className="page">
+      <div className="inner-mw">
         <h2 className="page-title media-title green">Photo Albums</h2>
-      </header>
-      <section className="page-content">
-        <div className="page-content-center">
-          <Galleries gallery={summer} title="One Summer on Govardhan" />
-          <Galleries gallery={fall} title="Fall on Govardhan" />
-          <Galleries gallery={rad} title="Radhastami 2017" />
-          <Galleries gallery={cleaning} title="Cleaning Syama Kunda" />
-          <Galleries
-            gallery={varsana}
-            title="Varsana Maharaj and Jananivas Prabhu"
-          />
-          <Galleries gallery={devi} title="Vrinda-Devi and her birthday cake" />
-        </div>
-      </section>
-    </main>
+
+        <section className="page-content">
+          <div className="inner-mw">
+            <Accordion>
+              <div label="One Summer on Govardhan">
+                <Galleries gallery={summer} />
+              </div>
+              <div label="Fall on Govardhan">
+                <Galleries gallery={fall} />
+              </div>
+              <div label="Radhastami 2017">
+                <Galleries gallery={rad} />
+              </div>
+              <div label="Cleaning Syama Kunda">
+                <Galleries gallery={cleaning} />
+              </div>
+              <div label="Varsana Maharaj and Jananivas Prabhu">
+                <Galleries gallery={varsana} />
+              </div>
+              <div label="Vrinda-Devi and her birthday cake">
+                <Galleries gallery={devi} />
+              </div>
+            </Accordion>
+          </div>
+        </section>
+      </div>
+    </Wrapper>
   );
 };
 
 export default Photos;
+
+const Wrapper = styled.main`
+  .folder-title {
+    background: var(--clr-yellow);
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+`;
 
 export const query = graphql`
   {

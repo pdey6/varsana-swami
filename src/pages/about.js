@@ -2,39 +2,44 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
-const About = (props) => {
+const About = () => {
   return (
-    <main className="page">
+    <Wrapper className="page">
       <h2 className="page-title"> Varsana Swami </h2>
       <header className="page-header">
-        <div className="page-hero">
-          <StaticImage
-            src="../assets/images/about-1.jpg"
-            alt="about"
-            className="page-hero-img about-img"
-          />
-          <article className="page-hero-info">
-            <p>
-              Varsana Maharaj is known for his deep understanding of the Gaudiya
-              Vaishnava teachings, and his enlivening presentations on Gaura
-              Lila, Vrindavan pastimes, and Dhama-tattva.
-            </p>
-            <p>
-              Led by the sensitivity of his heart, Maharaj has a unique lifelong
-              connection with the Earth. His reverence is palpable as he takes
-              special interest in the Dhama, sustainability and eco ethics.
-            </p>
-            <p>
-              Maharaj effortlessly connects the magic of the natural world to
-              Bhakti theology in a way that both illuminates scriptural
-              understanding and awakens intuitive knowing to the listener.
-            </p>
-          </article>
+        <div className="inner-mw">
+          <div className="page-hero">
+            <figure>
+              <StaticImage
+                src="../assets/images/about-1.jpg"
+                alt="about"
+                className="image"
+              />
+            </figure>
+            <article className="page-hero-info">
+              <p>
+                Varsana Maharaj is known for his deep understanding of the
+                Gaudiya Vaishnava teachings, his enlivening presentations on
+                Gaura Lila, Vrindavan pastimes, and Dhama-tattva.
+              </p>
+              <p>
+                Led by the sensitivity of his heart, Maharaj has a unique
+                lifelong connection with the Earth. His reverence is palpable as
+                he takes special interest in the Dhama, sustainability and eco
+                ethics.
+              </p>
+              <p>
+                Maharaj effortlessly connects the magic of the natural world to
+                Bhakti theology in a way that both illuminates scriptural
+                understanding and awakens intuitive knowing to the listener.
+              </p>
+            </article>
+          </div>
         </div>
       </header>
 
       <section className="page-content">
-        <div className="page-content-center">
+        <div className="inner-mw">
           <p>
             Varsana Swami was born in 1950 in Morristown, New Jersey. From
             childhood, he was deeply drawn to the workings of the natural world.
@@ -73,10 +78,39 @@ const About = (props) => {
           </p>
         </div>
       </section>
-    </main>
+    </Wrapper>
   );
 };
 
 export default About;
 
-const Wrapper = styled.main``;
+const Wrapper = styled.main`
+  @media screen and (min-width: 992px) {
+    .page-hero {
+      display: grid;
+      grid-template-areas: "pg-figure pg-article pg-article";
+      gap: 3rem;
+    }
+
+    .page-hero figure {
+      grid-area: pg-figure;
+    }
+
+    .page-hero article {
+      grid-area: pg-article;
+    }
+
+    /* .page-hero {
+      padding-bottom: 2rem;
+      border-bottom: 3px solid var(--clr-grey-10);
+    } */
+
+    .page-hero .image {
+      display: block;
+      margin-top: 0.5rem;
+      height: 95%;
+      width: 16rem;
+      border-radius: 1rem;
+    }
+  }
+`;
