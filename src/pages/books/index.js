@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import styled from 'styled-components'
 
 const Books = (props) => {
   return (
@@ -113,7 +114,7 @@ const BooksContent = styled.div`
     color: inherit;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
 
     .book {
       flex-direction: row;
