@@ -1,7 +1,7 @@
 ---
 title: "Lalita-devi dasi stewardess of Lalita kunda"
 date: 2016-07-15
-category: 'govardhan-katha'
+category: 'drops-of-wisdom'
 cover: "./cover.jpg"
 ---
 

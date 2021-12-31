@@ -19,6 +19,6 @@ collections:
     fields:
       - { label: 'Date', name: 'date', widget: 'datetime' }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Category', name: 'category', widget: 'select', options: ["festivals", "govardhan-katha", "miscellaneous", "nature-meditations", "personalities", "relationships", "sadhu-sanga", "simple-living", "sri-dhama"] }
+      - { label: 'Category', name: 'category', widget: 'select', options: ["festivals", "drops-of-wisdom", "miscellaneous", "nature-meditations", "personalities", "relationships", "sadhu-sanga", "earth-culture", "sri-dhama"] }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

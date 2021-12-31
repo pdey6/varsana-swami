@@ -5,7 +5,7 @@ export const writings = [
     info: [
       {
         name: "Drops of Wisdom",
-        route: "/govardhan-katha",
+        route: "/drops-of-wisdom",
       },
       {
         name: "Miscellaneous",
@@ -29,7 +29,7 @@ export const writings = [
       },
       {
         name: "Simple Living",
-        route: "/simple-living",
+        route: "/earth-culture",
       },
       {
         name: "Sri Dhama",

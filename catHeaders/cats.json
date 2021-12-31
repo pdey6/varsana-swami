@@ -7,22 +7,22 @@
     "image": "./images/sri-dhama.jpg"
   },
   {
-    "title": "Govardhan Katha",
-    "slug": "govardhan-katha",
-    "fontColor": "#F5F3F1",
+    "title": "Drops of Wisdom",
+    "slug": "drops-of-wisdom",
+    "fontColor": "#140704",
     "bgColor": "#92A441",
     "image":  "./images/govardhan-katha.jpg"
   },
   {
     "title": "Nature Meditations",
     "slug": "nature-meditations",
-    "fontColor": "#F5F3F1",
+    "fontColor": "#140704",
     "bgColor": "#9B7657",
     "image":  "./images/nature-meditations.jpg"
   },
   {
-    "title": "Simple Living",
-    "slug": "simple-living",
+    "title": "Earth Culture",
+    "slug": "earth-culture",
     "fontColor": "#140704",
     "bgColor": "#F6E9B5",
     "image":  "./images/simple-living.jpg"
@@ -37,7 +37,7 @@
   {
     "title": "Sadhu-Sanga Guru-Disciple",
     "slug": "sadhu-sanga",
-    "fontColor": "#F5F3F1",
+    "fontColor": "#140704",
     "bgColor": "#C84B47",
     "image":  "./images/sadhu-sanga.jpg"
   },
@@ -51,7 +51,7 @@
   {
     "title": "Personalities",
     "slug": "personalities",
-    "fontColor": "#F5F3F1",
+    "fontColor": "#140704",
     "bgColor": "#83529C",
     "image":  "./images/personalities.jpg"
   },

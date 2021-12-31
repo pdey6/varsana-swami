@@ -1,7 +1,7 @@
 ---
 title: "Govardhana's Moon Tower"
 date: 2018-12-29
-category: 'govardhan-katha'
+category: 'drops-of-wisdom'
 cover: "./cover.jpg"
 ---
 

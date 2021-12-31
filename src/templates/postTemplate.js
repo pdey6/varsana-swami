@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
+import wave3 from "../assets/images/wave3.svg";
 
 
 const PostTemplate = ({ data }) => {
@@ -42,8 +42,11 @@ const PostTemplate = ({ data }) => {
               })}
             </ul>
           </div>
+          
         </div>
+        <img src={wave3} className="wave wave-up" />
       </header>
+
       <article className="writing">
         <div className="cover-wrapper">
           <GatsbyImage

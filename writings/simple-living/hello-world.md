@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: 2018-12-29
-category: 'simple-living'
+category: 'earth-culture'
 cover: "./cover.jpg"
 ---
 

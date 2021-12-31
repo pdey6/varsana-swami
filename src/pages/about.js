@@ -90,6 +90,9 @@ const Wrapper = styled.main`
       display: grid;
       grid-template-areas: "pg-figure pg-article pg-article";
       gap: 3rem;
+      margin: 0 auto;
+      width: 80%;
+      margin-bottom: 2em;
     }
 
     .page-hero figure {

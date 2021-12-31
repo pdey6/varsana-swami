@@ -224,6 +224,7 @@ button:hover,
   .wave-up {
     margin-top: -6rem;
   }
+
 }
 
 /* width */
@@ -233,13 +234,14 @@ button:hover,
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #dddddd;
+  background: #140704;
+
   border-radius: 8px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(241, 241, 241);
+  background: var(--clr-grey-10);
   border-radius: 8px;
 }
 
@@ -402,6 +404,7 @@ button:hover,
   padding: 1em 0;
   margin-bottom: 1rem;
   font-family: "Montserrat", sans-serif;
+
 }
 
 .cat-title {
@@ -457,7 +460,7 @@ button:hover,
   .writing-category {
     flex-direction: row;
     padding: 1em 0;
-    margin-bottom: 4rem;
+    padding-bottom: 6rem;
   }
 
   .cat-title {
@@ -479,6 +482,10 @@ button:hover,
 
   .cat-list a {
     text-decoration: none;
+  }
+
+  .cover-wrapper {
+    height: 443px;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-
+import wave3 from "../assets/images/wave3.svg";
 
 const Category = ({ data }) => {
   const { html } = data.markdownRemark;
@@ -41,7 +41,9 @@ const Category = ({ data }) => {
             </ul>
           </div>
         </div>
+        <img src={wave3} className="wave wave-up" />
       </header>
+     
       <article className="writing">
         <div className="cover-wrapper">
           <GatsbyImage

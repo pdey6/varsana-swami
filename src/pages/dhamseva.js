@@ -213,6 +213,9 @@ const Wrapper = styled.main`
     .page-hero {
       display: grid;
       grid-template-areas: "pg-figure pg-article pg-article";
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 2em;
     }
 
     .page-hero figure {
