@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import wave3 from "../assets/images/wave3.svg";
+import leaf from "../assets/images/leaf.svg";
 
 const Category = ({ data }) => {
   const { html } = data.markdownRemark;
@@ -16,7 +17,7 @@ const Category = ({ data }) => {
           alt={header.title}
           className="banner"
         />
-        <div style={{ backgroundColor: `${header.bgColor}` }}>
+        <div className="writing-wrapper" style={{ backgroundColor: `${header.bgColor}` }}>
           <div className="writing-category inner-mw">
             <h1 style={{ color: `${header.fontColor}` }} className="cat-title">
               {header.title}
@@ -28,6 +29,7 @@ const Category = ({ data }) => {
                     key={post.node.fields.slug}
                     style={{ color: `${header.fontColor}`}}
                   >
+                    <img src={leaf} />
                     <Link
                       to={post.node.fields.slug}
                       style={{ color: `${header.fontColor}` }}
@@ -41,7 +43,7 @@ const Category = ({ data }) => {
             </ul>
           </div>
         </div>
-        <img src={wave3} className="wave wave-up" />
+        <img src={wave3} className="wave wave3" />
       </header>
      
       <article className="writing">

@@ -1,7 +1,7 @@
 ---
 title: Thank you
 date: 2018-12-29
-category: 'miscellaneous'
+category: 'various'
 cover: "./cover.jpg"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Misconceptions, doubts and relationships
 date: 2018-12-29
-category: 'relationships'
+category: 'srila'
 cover: "./cover.jpg"
 ---
 

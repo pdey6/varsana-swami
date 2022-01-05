@@ -71,27 +71,27 @@ module.exports = {
       },
       __key: 'writings',
     },
-    {
-      resolve: `gatsby-source-cloudinary`,
-      options: {
-        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-        apiKey: process.env.CLOUDINARY_API_KEY,
-        apiSecret: process.env.CLOUDINARY_API_SECRET,
-        resourceType: `image`,
-        prefix: `Gallery/`,
-        maxResults: 500, 
-      },
-    },
-    {
-      resolve: `gatsby-source-cloudinary`,
-      options: {
-        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-        apiKey: process.env.CLOUDINARY_API_KEY,
-        apiSecret: process.env.CLOUDINARY_API_SECRET,
-        resourceType: `video`,
-        prefix: `Audio/`,
-        maxResults: 300, 
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-cloudinary`,
+    //   options: {
+    //     cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+    //     apiKey: process.env.CLOUDINARY_API_KEY,
+    //     apiSecret: process.env.CLOUDINARY_API_SECRET,
+    //     resourceType: `image`,
+    //     prefix: `Gallery/`,
+    //     maxResults: 500, 
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-cloudinary`,
+    //   options: {
+    //     cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+    //     apiKey: process.env.CLOUDINARY_API_KEY,
+    //     apiSecret: process.env.CLOUDINARY_API_SECRET,
+    //     resourceType: `video`,
+    //     prefix: `Audio/`,
+    //     maxResults: 300, 
+    //   },
+    // },
   ],
 }

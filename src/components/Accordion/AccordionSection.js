@@ -18,9 +18,9 @@ class AccordionSection extends Component {
 
     return (
       <div>
-        <div onClick={onClick} style={{ cursor: "pointer" }} className="folder-title">
+        <div onClick={onClick} style={{ display: "flex", justifyContent: "space-between" ,cursor: "pointer" }} className="folder-title">
           {label}
-          <div style={{ float: "right" }}>
+          <div>
             {!isOpen && <span>&#9650;</span>}
             {isOpen && <span>&#9660;</span>}
           </div>

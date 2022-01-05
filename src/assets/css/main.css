@@ -220,6 +220,10 @@ button:hover,
   margin-top: -3rem;
 }
 
+.wave3 {
+  margin-top: -3rem;
+}
+
 @media screen and (min-width: 992px) {
   .wave-up {
     margin-top: -6rem;
@@ -277,7 +281,7 @@ button:hover,
 }
 
 .page-header {
-  padding-top: 1em;
+  padding-top: 0;
   border-bottom: 3px solid var(--grey);
 }
 
@@ -285,7 +289,13 @@ button:hover,
   font-weight: 600;
   letter-spacing: 1px;
   text-align: center;
-  padding: 0.75em 0;
+  padding: 0.75em 0 0.25em;
+  margin-bottom: 2rem;
+}
+
+.page-hero {
+  border-bottom: 3px solid var(--clr-grey-10);
+  margin-bottom: 1rem;
 }
 
 .page-hero-img {
@@ -329,15 +339,18 @@ button:hover,
 }
 
 .folder-title {
-  font-weight: 800;
   padding: 0.25em 2rem;
-  font-size: 2rem;
-  /* background-color: var(--grey); */
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 @media screen and (min-width: 992px) {
   .page {
     padding-bottom: 2em;
+  }
+
+  .page-header {
+    padding-top: 1em;
   }
 
   .page-title {
@@ -348,7 +361,7 @@ button:hover,
   .page-hero {
     display: flex;
     padding-bottom: 2rem;
-    border-bottom: 3px solid var(--clr-grey-10);
+    margin-bottom: 0;
   }
 
   .page-hero-info p {
@@ -369,6 +382,10 @@ button:hover,
     height: 30.1rem;
     width: 100%;
   }
+
+  .folder-title {
+    font-size: 2rem;
+  }
 }
 
 /*
@@ -383,42 +400,47 @@ button:hover,
 }
 
 .writing {
-  padding: 0 0.5em;
+  padding: 0 1em;
   max-width: 880px;
   margin: 0 auto;
   background: #fbfaf9;
 }
 
 .writing h2 {
-  margin: 1em 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 800;
   text-align: center;
+  padding: 1em 0;
+  margin-bottom: 0; 
 }
 
 .writing-category {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 1em;
   margin-bottom: 1rem;
   font-family: "Montserrat", sans-serif;
+}
 
+.writing-wrapper {
+  padding-bottom: 1rem;
 }
 
 .cat-title {
   margin: 0 0.5rem;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .cat-list {
   margin: 0;
   padding: 0 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.7;
   max-height: 20vh;
@@ -426,8 +448,13 @@ button:hover,
 }
 
 .cat-list li {
-  list-style-position: inside;
-  list-style-image: url("/leaf.png");
+  display: flex;
+  align-items: center;
+}
+
+.cat-list img {
+  align-self: baseline;
+  margin-right: 0.75rem;
 }
 
 .cat-list a {
@@ -446,6 +473,7 @@ button:hover,
 
 .writing-body {
   font-size: clamp(1rem, 3vw, 1.55rem);
+  font-weight: 400;
 }
 
 .writing-body p {
@@ -454,9 +482,25 @@ button:hover,
 
 .banner {
   z-index: -25;
+  height: 158px; 
 }
 
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--clr-black);
+}
+
+.mobile-pd {
+  padding: 0 1em; 
+}
+
+
 @media screen and (min-width: 962px) {
+
+  .writing {
+    margin-top: -2rem;
+  }
+  
   .writing-category {
     flex-direction: row;
     padding: 1em 0;
@@ -467,6 +511,7 @@ button:hover,
     align-self: center;
     margin-left: 3em;
     width: 38%;
+    font-size: 2.5rem;
   }
 
   .cat-list {
@@ -480,6 +525,10 @@ button:hover,
     width: 60%;
   }
 
+  .cat-list img {
+    margin-top: 0.5rem;
+  }
+
   .cat-list a {
     text-decoration: none;
   }
@@ -487,10 +536,18 @@ button:hover,
   .cover-wrapper {
     height: 443px;
   }
+
+  .mobile-pd {
+    padding: 0; 
+  }
+
+  .banner {
+    z-index: -25;
+    height: 100%; 
+  }
+
+  
+  
 }
 
-.nav-link:focus,
-.nav-link:hover {
-  color: var(--clr-black);
-}
 

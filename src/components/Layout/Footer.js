@@ -11,7 +11,7 @@ const Footer = () => {
     <Wrapper>
       <img src={wave2} className="wave" />
       <div className="footer">
-        <div className="inner-mw">
+        <div className="inner-mw mobile-pd">
           <section className="info">
             <div className="info-col info-col-1">
               <div className="icons">
@@ -43,7 +43,7 @@ const Footer = () => {
           </section>
         </div>
 
-        <section className="copyright inner-mw">
+        <section className="copyright inner-mw mobile-pd">
           <p>&copy; 1972 - {new Date().getFullYear()} Varsana Swami</p>
         </section>
       </div>

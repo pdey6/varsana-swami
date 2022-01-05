@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const Founder = () => {
   return (
     <Wrapper>
-      <div className="inner-mw">
+      <div className="inner-mw mobile-pd">
         <div className="info">
           <figure>
             <StaticImage
@@ -41,7 +41,7 @@ const Founder = () => {
 export default Founder;
 
 const Wrapper = styled.section`
-  padding: 3em 1em;
+  padding: 2em 1em;
   font-family: "Roboto", sans-serif;
 
   .info {
@@ -59,6 +59,7 @@ const Wrapper = styled.section`
   article {
     text-align: center;
     overflow-wrap: break-word;
+    margin-top: 1rem;
   }
 
   article h3 {
@@ -115,6 +116,7 @@ const Wrapper = styled.section`
       flex-direction: column;
       justify-content:space-between; 
       height: 443px;
+      margin-top: 0;
     }
   }
 `;

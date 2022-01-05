@@ -9,7 +9,7 @@ const Dham = (props) => {
     <Wrapper className="page">
       <h2 className="page-title">Dham Seva Project</h2>
       <header className="page-header">
-        <div className="inner-mw">
+        <div className="inner-mw mobile-pd">
           <div className="page-hero">
             <figure>
               <StaticImage
@@ -37,7 +37,7 @@ const Dham = (props) => {
       </header>
 
       <section className="page-content">
-        <div className="inner-mw">
+        <div className="inner-mw mobile-pd">
           <article>
             <p>
               Following the order of Lord Caitanya, the Six Goswamis of
@@ -63,7 +63,7 @@ const Dham = (props) => {
 
       <section className="page-content">
         <article className="excerpt-content">
-          <div className="inner-mw">
+          <div className="inner-mw mobile-pd">
             <header>
               <h2 className="excerpt-title">
                 Selected excerpts from Srila Prabhupada’s letters <br />

@@ -4,7 +4,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 import onClickOutside from "react-onclickoutside";
 import styled from "styled-components";
-import {writings, media} from "./links";
+import { writings, media } from "./links";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -12,17 +12,16 @@ const Navbar = () => {
   const [drop2, setDrop2] = useState(false);
 
   Navbar.handleClickOutside = () => {
-    setShow(false)
+    setShow(false);
     setDrop1(false);
     setDrop2(false);
   };
 
   const close = () => {
-    setShow(false)
+    setShow(false);
     setDrop1(false);
     setDrop2(false);
   };
-
 
   return (
     <Wrapper className="navbar">
@@ -57,8 +56,8 @@ const Navbar = () => {
           </Link>
 
           {writings.map((link) => {
-            const title = link.title
-            const info = link.info
+            const title = link.title;
+            const info = link.info;
             return (
               <div className="dropdown">
                 <header className="dd-header">
@@ -80,7 +79,6 @@ const Navbar = () => {
                         >
                           {i.name}
                         </Link>
-                        
                       );
                     })}
                   </div>
@@ -90,8 +88,8 @@ const Navbar = () => {
           })}
 
           {media.map((link) => {
-            const title = link.title
-            const info = link.info
+            const title = link.title;
+            const info = link.info;
             return (
               <div className="dropdown">
                 <header className="dd-header">
@@ -131,7 +129,12 @@ const Navbar = () => {
           </Link>
 
           <div className="nav-link">
-            <a href="" target="_blank" className="donate-link" onClick={() => setShow(false)}>
+            <a
+              href=""
+              target="_blank"
+              className="donate-link"
+              onClick={() => setShow(false)}
+            >
               Donate
             </a>
           </div>
@@ -151,7 +154,6 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: center;
   padding-bottom: 1rem;
-
 
   .site-title {
     margin-bottom: 0.25rem;
@@ -219,12 +221,14 @@ const Wrapper = styled.nav`
     display: block;
     border-top: 1px solid var(--clr-grey-50);
     padding: 0.5em 0;
+    font-weight: 700;
 
     color: var(--clr-black);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: var(--f-spacing);
     transition: var(--transition);
+    text-align: left;
   }
 
   .active-link {
@@ -265,8 +269,9 @@ const Wrapper = styled.nav`
     margin: 0;
   }
 
-  .nav-link {
-    text-align: left;
+  .submenu .nav-link {
+    font-size: 0.9rem;
+    margin-bottom: 0.5em;
   }
 
   @media only screen and (min-width: 768px) {
@@ -280,12 +285,7 @@ const Wrapper = styled.nav`
       padding: 1em;
       margin-right: -1em;
       background-color: var(--clr-white);
-      box-shadow: var(--shadow-4); 
-    }
-
-    .submenu .nav-link {
-      font-size: 0.9rem;
-      margin-bottom: 0.5em;
+      box-shadow: var(--shadow-4);
     }
   }
 

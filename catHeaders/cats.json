@@ -28,22 +28,22 @@
     "image":  "./images/simple-living.jpg"
   },
   {
-    "title": "Vyasa Puja Offerings",
+    "title": "Vyasa Puja Offerings to Srila Prabhupada",
     "slug": "vyasa-puja",
     "fontColor": "#140704",
     "bgColor": "#F6E9B5",
     "image":  "./images/puja.jpg"
   },
   {
-    "title": "Sadhu-Sanga Guru-Disciple",
-    "slug": "sadhu-sanga",
+    "title": "Srila Prabhupada Katha",
+    "slug": "srila",
     "fontColor": "#140704",
     "bgColor": "#C84B47",
     "image":  "./images/sadhu-sanga.jpg"
   },
   {
-    "title": "Relationships",
-    "slug": "relationships",
+    "title": "Sadhu-Sanga",
+    "slug": "sadhu-sanga",
     "fontColor": "#140704",
     "bgColor": "#F8C59F",
     "image":  "./images/relationships.jpg"
@@ -56,8 +56,8 @@
     "image":  "./images/personalities.jpg"
   },
   {
-    "title": "Miscellaneous",
-    "slug": "miscellaneous",
+    "title": "Various",
+    "slug": "various",
     "fontColor": "#140704",
     "bgColor": "#FFFC9E",
     "image":  "./images/miscellaneous.jpg"

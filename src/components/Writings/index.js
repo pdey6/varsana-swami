@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Writings = ({ writings }) => {
   return (
     <Wrapper>
-      <div className="inner-mw">
+      <div className="inner-mw mobile-pd mobile-pd">
         {writings.map((writing) => {
           return <Writing key={writing.id} {...writing} />;
         })}

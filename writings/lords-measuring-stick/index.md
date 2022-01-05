@@ -1,7 +1,7 @@
 ---
 title: Lord's Measuring Stick
 date: 2020-05-15
-category: 'miscellaneous'
+category: 'various'
 cover: "./cover.jpg"
 ---
 

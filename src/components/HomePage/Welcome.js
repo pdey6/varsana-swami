@@ -20,7 +20,7 @@ const Welcome = () => {
       <img src={wave1} alt="wave" className="wave wave-up" />
 
       <div className="welcome-wrap">
-        <div className="inner-mw">
+        <div className="inner-mw mobile-pd">
           <section className="welcome">
             <article>
               <h3>Welcome</h3>
@@ -61,6 +61,12 @@ export default Welcome;
 const Wrapper = styled.header`
   .hero {
     margin: 0;
+    position: relative;
+    z-index: -5;
+  }
+
+  .hero-img {
+    height: 30vh;
   }
 
   .welcome-wrap {
@@ -74,7 +80,7 @@ const Wrapper = styled.header`
       "w-figure"
       "w-article";
     margin-top: -1.25rem;
-    padding: 0 1em 1em;
+    padding: 0;
   }
 
   .welcome article {
@@ -84,6 +90,7 @@ const Wrapper = styled.header`
 
   .welcome figure {
     grid-area: w-figure;
+    padding: 1.5rem;
   }
 
   .image {
@@ -114,15 +121,16 @@ const Wrapper = styled.header`
 
   @media screen and (min-width: 992px) {
     .hero {
-      position: relative;
-      z-index: -5;
       height: 70%;
     }
 
     .hero-img {
       border-radius: var(--radius);
       border-radius: 0;
+      height: 100%;
     }
+
+   
 
     .welcome article {
       margin-top: -1.5rem;
@@ -142,22 +150,22 @@ const Wrapper = styled.header`
       padding-bottom: 3rem;
     }
 
-    
     .welcome h3 {
       font-size: 2.25rem;
     }
-    
+
     .signature {
       margin-left: 0;
       align-self: flex-end;
       margin-top: -1rem;
       margin-right: 2rem;
     }
-    
+
     .welcome figure {
       align-self: center;
       height: 18rem;
       margin-bottom: 2rem;
+      padding: 0;
     }
 
     .image {

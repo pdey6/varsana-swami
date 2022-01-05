@@ -8,8 +8,8 @@ export const writings = [
         route: "/drops-of-wisdom",
       },
       {
-        name: "Miscellaneous",
-        route: "/miscellaneous",
+        name: "Earth Culture",
+        route: "/earth-culture",
       },
       {
         name: "Nature Meditations",
@@ -20,24 +20,24 @@ export const writings = [
         route: "/personalities",
       },
       {
-        name: "Relationships",
-        route: "/relationships",
+        name: "Srila Prabhupada Katha",
+        route: "/srila",
       },
       {
-        name: "Sadhu-Sanga Guru-Disciple",
+        name: "Sadhu-Sanga",
         route: "/sadhu-sanga",
-      },
-      {
-        name: "Simple Living",
-        route: "/earth-culture",
       },
       {
         name: "Sri Dhama",
         route: "/sri-dhama",
       },
       {
-        name: "Vyasa Puja Offerings",
+        name: "Vyasa Puja Offerings to Srila Prabhupada",
         route: "/vyasa-puja",
+      },
+      {
+        name: "Various",
+        route: "/various",
       },
     ]
   }

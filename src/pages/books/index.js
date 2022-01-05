@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Books = (props) => {
   return (
     <main className="page">
-      <div className="inner-mw">
+      <div className="inner-mw mobile-pd">
         <h2 className="page-title border-b">Books</h2>
         <section className="page-content">
           <BooksContent className="books">
@@ -67,6 +67,7 @@ const BooksContent = styled.div`
   .book {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
   }
 
   .book-info {
@@ -119,7 +120,6 @@ const BooksContent = styled.div`
     .book {
       flex-direction: row;
       align-items: center;
-      margin-bottom: 2em; 
     }
 
     .book-info {

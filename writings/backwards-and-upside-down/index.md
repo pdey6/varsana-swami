@@ -1,7 +1,7 @@
 ---
 title: Backwards and upside down
 date: 2020-01-15
-category: 'miscellaneous'
+category: 'various'
 cover: "./cover.jpg"
 ---
 

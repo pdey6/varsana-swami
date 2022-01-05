@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import wave3 from "../assets/images/wave3.svg";
-
+import leaf from "../assets/images/leaf.svg";
 
 const PostTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
@@ -18,7 +18,10 @@ const PostTemplate = ({ data }) => {
           className="banner"
         />
 
-        <div style={{ backgroundColor: `${header.bgColor}` }}>
+        <div
+          className="writing-wrapper"
+          style={{ backgroundColor: `${header.bgColor}` }}
+        >
           <div className="writing-category inner-mw">
             <h1 style={{ color: `${header.fontColor}` }} className="cat-title">
               {header.title}
@@ -30,6 +33,7 @@ const PostTemplate = ({ data }) => {
                     key={post.node.fields.slug}
                     style={{ color: `${header.fontColor}` }}
                   >
+                    <img src={leaf} />
                     <Link
                       to={post.node.fields.slug}
                       style={{ color: `${header.fontColor}` }}
@@ -42,9 +46,8 @@ const PostTemplate = ({ data }) => {
               })}
             </ul>
           </div>
-          
         </div>
-        <img src={wave3} className="wave wave-up" />
+        <img src={wave3} className="wave wave3" />
       </header>
 
       <article className="writing">
@@ -52,7 +55,6 @@ const PostTemplate = ({ data }) => {
           <GatsbyImage
             image={getImage(frontmatter.cover)}
             alt={frontmatter.title}
-            className="writing-img"
           />
         </div>
         <h2 className="writing-title">{frontmatter.title}</h2>

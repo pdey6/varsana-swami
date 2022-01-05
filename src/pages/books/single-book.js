@@ -8,7 +8,7 @@ import styled from "styled-components";
 const Books = () => {
   return (
     <Wrapper className="page">
-      <div className="inner-mw">
+      <div className="inner-mw mobile-pd">
         <article className="purchase">
         <Link
             to="/purchase"

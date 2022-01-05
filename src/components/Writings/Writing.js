@@ -62,9 +62,10 @@ const Wrapper = styled.article`
   .excerpt {
     margin-bottom: 1em;
 
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    letter-spacing: -.25px; 
   }
 
   button {
@@ -111,12 +112,17 @@ const Wrapper = styled.article`
     }
 
     .info {
-      margin-top: 0; 
+      margin-top: 0;
+      height: 443px; 
     }
 
     .writing-date {
       margin-top: 0;
       margin-bottom: 0.75em;
+    }
+
+    .image {
+      height: 443px;
     }
 
   }

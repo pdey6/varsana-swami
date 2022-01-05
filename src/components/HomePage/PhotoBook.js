@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const PhotoBook = () => {
   return (
     <Wrapper className="photo-book">
-      <div className="inner-mw grid">
+      <div className="inner-mw mobile-pd grid">
         <figure>
           <StaticImage
             src="../../assets/images/photo-book.jpg"

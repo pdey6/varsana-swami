@@ -7,7 +7,7 @@ const About = () => {
     <Wrapper className="page">
       <h2 className="page-title"> Varsana Swami </h2>
       <header className="page-header">
-        <div className="inner-mw">
+        <div className="inner-mw mobile-pd">
           <div className="page-hero">
             <figure>
               <StaticImage
@@ -39,7 +39,7 @@ const About = () => {
       </header>
 
       <section className="page-content">
-        <div className="inner-mw">
+        <div className="inner-mw mobile-pd">
           <p>
             Varsana Swami was born in 1950 in Morristown, New Jersey. From
             childhood, he was deeply drawn to the workings of the natural world.
@@ -85,6 +85,20 @@ const About = () => {
 export default About;
 
 const Wrapper = styled.main`
+
+figure {
+  display: flex;
+  justify-content: center;
+}
+
+.page-hero article {
+  margin-top: 1rem;
+}
+
+.page-hero-info p {
+  margin-bottom: 0.5em;
+}
+
   @media screen and (min-width: 992px) {
     .page-hero {
       display: grid;
