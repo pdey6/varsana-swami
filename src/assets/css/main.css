@@ -224,6 +224,10 @@ button:hover,
   margin-top: -3rem;
 }
 
+.image {
+  border-radius: var(--radius);
+}
+
 @media screen and (min-width: 992px) {
   .wave-up {
     margin-top: -6rem;
@@ -268,6 +272,20 @@ button:hover,
   display: flex;
   justify-content:center;
 }
+
+.buy-btn {
+  font-family: "Dancing Script", cursive;
+  background: var(--clr-black);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.buy-btn span {
+  font-size: 1.5rem;
+  color: #f3ef7b;
+}
+
+
 
 /*
 =============== 
@@ -495,7 +513,7 @@ button:hover,
 }
 
 
-@media screen and (min-width: 962px) {
+@media screen and (min-width: 992px) {
 
   .writing {
     margin-top: -2rem;

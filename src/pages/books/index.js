@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Books = (props) => {
   return (
@@ -32,9 +32,17 @@ const Books = (props) => {
                   deeper, magical dimensions of Sri Dhama. It offers a tangible
                   glimpse of this enchanted realm, not easily seen...
                 </p>
-                <button>
-                  <Link to="/books/single-book"> Read More </Link>
-                </button>
+                <div className="buttons">
+                  <button>
+                    <Link to="/books/single-book"> Read More </Link>
+                  </button>
+                  <div className="buy">
+                    <Link to="/purchase" className="buy-btn">
+                      <span>Buy</span>
+                      <span>Now</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="book">
@@ -61,7 +69,6 @@ const Books = (props) => {
 export default Books;
 
 const BooksContent = styled.div`
- 
   padding-bottom: 0;
 
   .book {
@@ -116,7 +123,6 @@ const BooksContent = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-
     .book {
       flex-direction: row;
       align-items: center;
@@ -124,7 +130,7 @@ const BooksContent = styled.div`
 
     .book-info {
       padding-left: 2em;
-      align-self: flex-start; 
+      align-self: flex-start;
     }
 
     .book-img {
@@ -138,5 +144,20 @@ const BooksContent = styled.div`
       min-width: 440px;
       min-height: 350px;
     }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .buy {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .buy-btn {
+      margin-top: -1rem;
+    }
+
   }
 `;

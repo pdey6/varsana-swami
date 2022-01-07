@@ -79,7 +79,7 @@ module.exports = {
     //     apiSecret: process.env.CLOUDINARY_API_SECRET,
     //     resourceType: `image`,
     //     prefix: `Gallery/`,
-    //     maxResults: 500, 
+    //     maxResults: 10, 
     //   },
     // },
     // {
@@ -90,7 +90,7 @@ module.exports = {
     //     apiSecret: process.env.CLOUDINARY_API_SECRET,
     //     resourceType: `video`,
     //     prefix: `Audio/`,
-    //     maxResults: 300, 
+    //     maxResults: 5, 
     //   },
     // },
   ],

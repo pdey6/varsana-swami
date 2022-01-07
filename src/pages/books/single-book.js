@@ -9,15 +9,6 @@ const Books = () => {
   return (
     <Wrapper className="page">
       <div className="inner-mw mobile-pd">
-        <article className="purchase">
-        <Link
-            to="/purchase"
-          >
-            Purchase
-          </Link>
-      
-        </article>
-
         <figure className="center">
           <StaticImage
             src="../../assets/images/books-photo.jpg"

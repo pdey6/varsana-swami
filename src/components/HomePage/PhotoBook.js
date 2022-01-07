@@ -1,10 +1,17 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
 const PhotoBook = () => {
   return (
     <Wrapper className="photo-book">
+      <div className="buy">  
+        <Link to='/purchase' className="buy-btn">
+          <span>Buy</span>
+          <span>Now</span>
+        </Link>
+      </div>
       <div className="inner-mw mobile-pd grid">
         <figure>
           <StaticImage
@@ -77,6 +84,27 @@ const Wrapper = styled.section`
     text-align: center;
   }
 
+  .buy {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .buy-btn {
+    margin-left: auto;
+    font-family: "Dancing Script", cursive;
+    color: var(--clr-white);
+    background: var(--clr-black);
+    border-radius: 50%;
+    padding: 0.5rem;
+    z-index: 5; 
+    margin-top: -1rem;
+  }
+
+  .buy-btn span {
+    font-size: 1.5rem; 
+  }
+
   @media screen and (min-width: 992px) {
     background: var(--clr-red);
 
@@ -86,7 +114,7 @@ const Wrapper = styled.section`
     }
 
     figure {
-      margin-left: 4rem; 
+      margin-left: 4rem;
     }
 
     .img {
@@ -98,7 +126,8 @@ const Wrapper = styled.section`
       grid-area: pb-info;
 
       margin-top: 0;
-      padding: 0.75em 0;
+      padding: 0;
+      padding-bottom: 1rem;
     }
 
     .text-box {

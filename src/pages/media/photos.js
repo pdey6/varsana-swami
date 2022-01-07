@@ -1,7 +1,7 @@
 import React from "react";
 // import { graphql } from "gatsby";
-import Galleries from "../../components/Gallery";
-import Accordion from "../../components/Accordion";
+// import Galleries from "../../components/Gallery";
+// import Accordion from "../../components/Accordion";
 import styled from "styled-components";
 
 const Photos = ({ data }) => {

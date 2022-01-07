@@ -18,7 +18,7 @@ const Founder = () => {
             <h3>His Divine Grace</h3>
             <h2>A.C. Bhaktivedanta Swami Prabhupada</h2>
             <h4>
-              Acharya of the International Society for Krishna Consciousness
+              Founder Acharya of the International Society for Krishna Consciousness
             </h4>
             <div className="links">
               <a href="https://prabhupada.krishna.com/" target="_blank" rel="noopener noreferrer">

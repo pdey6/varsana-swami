@@ -30,9 +30,7 @@ const Wrapper = styled.article`
   border-bottom: 3px solid var(--clr-grey-10);
 
 
-  .image {
-    border-radius: var(--radius);
-  }
+
 
   .info {
     display: flex;

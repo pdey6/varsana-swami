@@ -230,7 +230,6 @@ const Wrapper = styled.main`
       display: block;
       margin-top: 0.25rem;
       height: 95%;
-      border-radius: 1rem;
     }
   }
 `;

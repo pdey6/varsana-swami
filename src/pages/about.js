@@ -127,7 +127,6 @@ figure {
       margin-top: 0.5rem;
       height: 95%;
       width: 16rem;
-      border-radius: 1rem;
     }
   }
 `;

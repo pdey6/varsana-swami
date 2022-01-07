@@ -1,6 +1,6 @@
 import React from "react";
-import { AiFillFacebook, AiFillMail } from "react-icons/ai";
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { AiFillFacebook, AiFillMail, AiOutlineInstagram } from "react-icons/ai";
+import { FaMapMarkerAlt, FaYoutube, FaSoundcloud } from "react-icons/fa";
 import styled from "styled-components";
 
 import dham from "../../assets/images/DhamSeva.png";
@@ -11,23 +11,13 @@ const Footer = () => {
     <Wrapper>
       <img src={wave2} className="wave" />
       <div className="footer">
-        <div className="inner-mw mobile-pd">
+        <div className="inner-mw mobile-pd mobile-center">
           <section className="info">
-            <div className="info-col info-col-1">
-              <div className="icons">
+            <div className="info-col-1">
+              <a href="mailto:moontowerbooks@gmail.com" className="icons">
                 <AiFillMail className="icon" />
-                <p>moontowerbooks@gmail.com</p>
-              </div>
-              <div className="icons">
-                <FaPhoneAlt className="icon" />
-                <p>+1 (304) 843-0122 </p>
-              </div>
-            </div>
-            <div className="info-col info-col-3">
-              <div className="icons ">
-                <AiFillFacebook className="icon" />
-                <a href="https://www.facebook.com/varsanaswami" target="_blank" rel="noopener noreferrer"><p> Varsana Swami</p></a>
-              </div>
+                <p>Email Us</p>
+              </a>
               <div className="icons">
                 <FaMapMarkerAlt className="icon" />
                 <div>
@@ -37,14 +27,57 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="info-col info-col-2">
+            <div className="info-col-3">
+              <p> Varsana Swami</p>
+              <div className="icons ">
+                <a
+                  href="https://www.facebook.com/varsanaswami"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillFacebook className="icon" />
+                </a>
+                <a
+                  href="https://www.facebook.com/varsanaswami"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiOutlineInstagram className="icon" />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCRU2uERYaKK3rnO32GOfqlA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaYoutube className="icon" />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCRU2uERYaKK3rnO32GOfqlA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSoundcloud className="icon" />
+                </a>
+              </div>
+              <p>Dham Seva Inc.</p>
+              <div className="icons">
+                <a
+                  href="https://www.facebook.com/DhamSevaInc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillFacebook className="icon" />
+                </a>
+              </div>
+            </div>
+            <div className="info-col-2">
               <img src={dham} alt="dham seva" />
             </div>
           </section>
         </div>
 
         <section className="copyright inner-mw mobile-pd">
-          <p>&copy; 1972 - {new Date().getFullYear()} Varsana Swami</p>
+          <p>&copy; {new Date().getFullYear()} Varsana Swami</p>
         </section>
       </div>
     </Wrapper>
@@ -59,15 +92,25 @@ const Wrapper = styled.footer`
     background: linear-gradient(182.36deg, #e8c9df 52.69%, #f4f1f3 130.14%);
   }
 
+  .mobile-center {
+    width: min-content; 
+  }
+
   .info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .info p {
     font-size: 1rem;
     margin-bottom: 0;
   }
+
+  .info-col-2 {
+     display: flex;
+     flex-direction: column;
+     align-items: center; 
+    }
 
   .icons {
     display: flex;
@@ -79,16 +122,14 @@ const Wrapper = styled.footer`
   .icon {
     height: 2rem;
     width: 2rem;
+    display: flex;
+    align-items: center;
 
     margin-right: 0.75rem;
   }
 
   a {
-    color: inherit; 
-  }
-
-  .info-col {
-    margin: 0 auto;
+    color: inherit;
   }
 
   .copyright {
@@ -107,10 +148,19 @@ const Wrapper = styled.footer`
       margin-top: -4rem;
     }
 
+    .mobile-center {
+    width: unset; 
+  }
+
     .info {
-      display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       padding: 1em 0 0;
+    }
+
+    .info-col-1,
+    .info-col-2,
+    .info-col-3 {
+      margin: 0 auto;
     }
 
     .info-col-1 {
@@ -124,6 +174,5 @@ const Wrapper = styled.footer`
     .info-col-3 {
       order: 3;
     }
-
   }
 `;

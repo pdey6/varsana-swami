@@ -96,7 +96,6 @@ const Wrapper = styled.header`
   .image {
     display: block;
     margin: 0 auto;
-    border-radius: var(--radius);
   }
 
   .welcome h3 {
