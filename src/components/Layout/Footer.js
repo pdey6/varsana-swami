@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="info-col info-col-3">
               <div className="icons ">
                 <AiFillFacebook className="icon" />
-                <a href="https://www.facebook.com/varsanaswami"><p> Varsana Swami</p></a>
+                <a href="https://www.facebook.com/varsanaswami" target="_blank" rel="noopener noreferrer"><p> Varsana Swami</p></a>
               </div>
               <div className="icons">
                 <FaMapMarkerAlt className="icon" />

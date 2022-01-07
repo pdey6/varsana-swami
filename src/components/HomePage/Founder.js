@@ -21,13 +21,13 @@ const Founder = () => {
               Acharya of the International Society for Krishna Consciousness
             </h4>
             <div className="links">
-              <a href="https://prabhupada.krishna.com/">
+              <a href="https://prabhupada.krishna.com/" target="_blank" rel="noopener noreferrer">
                 https://prabhupada.krishna.com/
               </a>
-              <a href="https://prabhupadavani.org/">
+              <a href="https://prabhupadavani.org/" target="_blank" rel="noopener noreferrer">
                 https://prabhupadavani.org/
               </a>
-              <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada">
+              <a href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada" target="_blank" rel="noopener noreferrer">
                 https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada
               </a>
             </div>
